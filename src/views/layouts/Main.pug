@@ -1,0 +1,15 @@
+block variables
+
+doctype html
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    link(href=require("../../styles/index.scss") rel='stylesheet')
+    link(rel="icon" type="image/x-icon" href="/ru/favicon.ico")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
+    script(src=require("../../scripts/index.js") defer)
+    block title
+      title
+  body
+    block content

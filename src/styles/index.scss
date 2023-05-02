@@ -1,0 +1,46 @@
+@use "~scss-reset/_reset.scss";
+@use "fonts";
+@use "vars";
+
+// common components
+@use "components/title";
+@use "components/button";
+
+@import "~swiper/swiper-bundle.min.css";
+@import '~nouislider/dist/nouislider.css';
+
+body {
+  font-family: vars.$font-title;
+  background-color: white;
+}
+
+* {
+  box-sizing: border-box!important;
+}
+
+a {
+  cursor: pointer;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.body-lock {
+  overflow: hidden;
+  touch-action: none!important;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .body-lock:before {
+    position: absolute;
+    height: 25000000vh;
+    width: 100vw;
+    background: white;
+    content: '';
+    z-index: 10;
+    pointer-events: none;
+  }
+}
