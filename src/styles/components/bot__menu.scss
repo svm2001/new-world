@@ -1,0 +1,63 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.bot__menu {
+  @include responsive.media-breakpoint-up(1024) {
+    display: none;
+  }
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 16px;
+  position: fixed;
+  bottom: 0;
+  background: white;
+  z-index: 100;
+  transition: .5s;
+  &.lock {
+    pointer-events: none;
+  }
+  &-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 18%;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+    p {
+      font-size: 12px;
+    }
+    &-cart-counter {
+      position: absolute;
+      background: vars.$red;
+      border-radius: 999px;
+      width: 16px;
+      height: 16px;
+      align-items: center;
+      justify-content: center;
+      transition: .3s;
+      display: none;
+      top: -7px;
+      right: 30%;
+      &.visible {
+        display: flex;
+      }
+      span {
+        color: white;
+        font-size: 11px;
+      }
+    }
+  }
+
+  &-item.active svg path {
+    stroke: vars.$red;
+  }
+  //&-item:nth-child(2).active {
+  //  fill: vars.$red;
+  //}
+}

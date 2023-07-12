@@ -1,5 +1,30 @@
+@use '../mixins/responsive';
 @use "../vars";
-
 .h1 {
   color: vars.$black;
+}
+
+.h2 {
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 600;
+  @include responsive.media-breakpoint-up(768) {
+    font-size: 28px;
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    font-size: 32px;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    font-size: 36px;
+  }
+
+  &--flex {
+    @include responsive.media-breakpoint-up(768) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }

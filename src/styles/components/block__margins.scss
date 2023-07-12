@@ -1,0 +1,102 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.mainSlider {
+  margin: 16px 0 32px 0;
+  @include responsive.media-breakpoint-up(768) {
+    margin: 16px 0 36px 0;
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    margin: 16px 0 42px 0;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    margin: 16px 0 60px 0;
+  }
+}
+
+.bestPrice {
+  margin-bottom: 32px;
+  @include responsive.media-breakpoint-up(768) {
+    margin-bottom: 78px;
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    margin-bottom: 90px;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    margin-bottom: 80px;
+  }
+}
+
+.popular-category {
+  margin-bottom: 84px;
+  @include responsive.media-breakpoint-up(768) {
+    margin-bottom: 56px;
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    margin-bottom: 58px;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    margin-bottom: 80px;
+  }
+}
+
+.new-world-vk {
+  margin-bottom: 52px;
+  @include responsive.media-breakpoint-up(768) {
+    margin-bottom: 52px;
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    margin-bottom: 56px;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    margin-bottom: 80px;
+  }
+}
+
+.main-shops {
+  padding-top: 52px;
+  padding-bottom: 52px;
+  margin-bottom: 52px;
+  @include responsive.media-breakpoint-up(768) {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    margin-bottom: 52px;
+  }
+  @include responsive.media-breakpoint-up(1024) {
+    padding-top: 58px;
+    padding-bottom: 58px;
+    margin-bottom: 56px;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 80px;
+  }
+}
+
+.main-raitings {
+  margin-bottom: 80px;
+}
+
+.main-about {
+  margin-bottom: 44px;
+  @include responsive.media-breakpoint-up(768) {
+    margin-bottom: 53px;
+  }
+  @include responsive.media-breakpoint-up(1024) {
+    margin-bottom: 67px;
+  }
+
+  @include responsive.media-breakpoint-up(1200) {
+    margin-bottom: 80px;
+  }
+}

@@ -1,25 +1,70 @@
-@use "~scss-reset/_reset.scss";
+//@use "~scss-reset/_reset.scss";
 @use "fonts";
 @use "vars";
 
 // common components
 @use "components/title";
 @use "components/button";
+@use "components/container";
+@use "components/header";
+@use "components/burger__menu";
+@use "components/accordion";
+@use "components/bot__menu";
+@use "components/city__choose";
+@use "components/burger__catalog";
+@use "components/city__search";
+@use "components/sliders";
+@use "components/card";
+@use "components/popular__category";
+@use "components/new-world-vk";
+@use "components/main__shops";
+@use "components/main__raitings";
+@use "components/main__about";
+@use "components/scrollToTop";
+@use "components/breadcrumbs";
+@use "components/sort";
+@use "components/pagination";
+@use "components/filter__result-float";
+@use "components/product";
+@use "components/actions";
+@use "components/search";
 
+@use "components/catalog/catalog";
+@use "components/catalog/catalog-filter";
+@use "components/catalog/catalog-card";
+
+@use "components/footer";
+@use "components/block__margins";
 @import "~swiper/swiper-bundle.min.css";
 @import '~nouislider/dist/nouislider.css';
+@import 'accordion-js/dist/accordion.min.css';
 
 body {
-  font-family: vars.$font-title;
+  font-family: Manrope, sans-serif;
   background-color: white;
 }
 
-* {
-  box-sizing: border-box!important;
+body, html {
+  overflow-x: hidden;
 }
 
-a {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: vars.$black;
+  font-family: Manrope, sans-serif;
+}
+
+button {
+  background: transparent;
+  border: none;
+}
+
+a, button {
+  display: block;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .swiper {
@@ -27,20 +72,45 @@ a {
   height: 300px;
 }
 
-.body-lock {
-  overflow: hidden;
-  touch-action: none!important;
-  position: relative;
+.wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-@media (max-width: 768px) {
-  .body-lock:before {
-    position: absolute;
-    height: 25000000vh;
-    width: 100vw;
-    background: white;
-    content: '';
-    z-index: 10;
-    pointer-events: none;
+main {
+  margin-bottom: auto;
+}
+
+.swiper-slide {
+  padding: 10px 0;
+}
+
+@media(max-width: 1024px) {
+  .swiper-slide {
+    padding: 0;
   }
+}
+
+body.lock {
+  overflow: hidden;
+  position: relative;
+  max-height: 100vh;
+}
+
+
+*::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 8px/* ширина всей полосы прокрутки */
+}
+
+*::-webkit-scrollbar-track {
+  background: vars.$lightgray;        /* цвет зоны отслеживания */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: vars.$red;    /* цвет бегунка */
+  border-radius: 20px;       /* округлось бегунка */
+  border: vars.$red;  /* отступ вокруг бегунка */
 }

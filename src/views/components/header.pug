@@ -1,0 +1,818 @@
+mixin header ()
+  header.b-header
+    .container
+      .b-header-top
+        .b-header-top-icons
+          a(href="#").js-city-link
+            img(src=require("../../images/components/header/map-pin.svg") alt="pin")
+            span Славянск-на-Кубани
+          a(href="tel:+74951203700")
+            img(src=require("../../images/components/header/tel.svg") alt="tel")
+            span +7 (495) 120-37-00
+          a(href="#")
+            img(src=require("../../images/components/header/whatsapp.svg") alt="whatsapp")
+            span WhatsApp
+        .b-header-top-links
+          a(href="#") Реквизиты
+          a(href="#") Дизайнеры и мастера
+          a(href="#") Гарантия и возврат
+          a(href="#") Оплата
+          a(href="#") Доставка
+          a(href="#") Вакансии
+          a(href="#") Сотрудничество
+          a(href="#") Контакты
+
+      .b-header__wrapper
+        a.b-header__logo
+          img(src=require("../../images/components/header/logo.svg") alt="logo")
+        button.b-header-desk-catalog-btn(type="button") Каталог
+          .b-header-desk-catalog-btn-wrapper
+            span
+            span
+            span
+        .b-header-desk-catalog
+          .b-header-desk-catalog-switcher-wrapper
+            .b-header-desk-catalog-switcher.b-header-desk-catalog-switcher--active Свет
+            .b-header-desk-catalog-switcher Свет
+            .b-header-desk-catalog-switcher Пол
+            .b-header-desk-catalog-switcher Краска
+            .b-header-desk-catalog-switcher Камины
+            .b-header-desk-catalog-switcher Элементы декора
+            .b-header-desk-catalog-switcher Лучшая цена
+            .b-header-desk-catalog-switcher.b-header-desk-catalog-switcher--actions Акции
+          .b-header-desk-catalog-content-wrapper
+            .b-header-desk-catalog-content.b-header-desk-catalog-content--active
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Обои
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+
+            .b-header-desk-catalog-content
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Свет
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+            .b-header-desk-catalog-content
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Пол
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+            .b-header-desk-catalog-content
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Краска
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+            .b-header-desk-catalog-content
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Камины
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+            .b-header-desk-catalog-content
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Элементы декора
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+            .b-header-desk-catalog-content
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Лучшая цена
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Обои для стен
+                  a(href="#").b-header-catalog-content-item-block Обои под покраску
+                  a(href="#").b-header-catalog-content-item-block Жидкие обои
+                  a(href="#").b-header-catalog-content-item-block Фрески
+                  a(href="#").b-header-catalog-content-item-block Фотообои
+                  a(href="#").b-header-catalog-content-item-block Клей и герметики
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Помещение
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Гостиная
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Кабинет
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Прихожая
+                  a(href="#").b-header-catalog-content-item-block Спальня
+                  a(href="#").b-header-catalog-content-item-block Офис
+                  a(href="#").b-header-catalog-content-item-block Кухня
+                  a(href="#").b-header-catalog-content-item-block Детская
+                  a(href="#").b-header-catalog-content-item-block Коридор
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (3)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Стиль
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block Английский стиль
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Классика
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                  a(href="#").b-header-catalog-content-item-block Прованс
+                  a(href="#").b-header-catalog-content-item-block Скандинавский стиль
+                  a(href="#").b-header-catalog-content-item-block Лофт
+                  a(href="#").b-header-catalog-content-item-block Кантри
+                  a(href="#").b-header-catalog-content-item-block Немецкий стиль
+                  a(href="#").b-header-catalog-content-item-block Модерн
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (4)
+              .b-header-catalog-content-item
+                a(href="javascript:void(0);").b-header-catalog-content-item-title Производитель
+                .b-header-catalog-content-item-block-wrapper
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/1.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/2.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/3.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/4.svg") alt="brand")
+                  a(href="#").b-header-catalog-content-item-block
+                    .b-header-catalog-content-item-block-brand-wrapper
+                      img(src=require("../../images/components/header/brands/5.svg") alt="brand")
+                a(href="#").b-header-catalog-content-item-block.b-header-catalog-content-item-block--showmore Ещё (12)
+            .b-header-desk-catalog-content Акции компании
+
+        .b-header-desk-search
+          input.b-header-desk-search-field(type="search" placeholder="Искать люстры, обои, ламинат")
+          button(type="submit" name="s" value="" title='Перейти к результату поиска').b-header-desk-search-btn
+          .b-header-desk-search-result
+            .b-header-desk-search-result-wrapper
+              a(href="#") Обои 70455-41 Аспект Травертино 1,06*10 м
+              a(href="#") Обои 70455-41 Аспект
+              a(href="#") Обои 70455-4123 Матовая
+              a(href="#") Обои 70455-4123 Флезилиновая
+              a(href="#") Обои 70455-4123 Флезилиновая
+              a(href="#") Обои 70455-4123 Флезилиновая
+              a(href="#") Обои 70455-4123 Флезилиновая
+              a(href="#") Обои 70455-4123 Флезилиновая
+        .b-header-main-links
+          a(href="#")
+            svg(width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M19.25 21V19C19.25 17.9391 18.8286 16.9217 18.0784 16.1716C17.3283 15.4214 16.3109 15 15.25 15H9.25C8.18913 15 7.17172 15.4214 6.42157 16.1716C5.67143 16.9217 5.25 17.9391 5.25 19V21" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+              path(d="M12.25 11C14.4591 11 16.25 9.20914 16.25 7C16.25 4.79086 14.4591 3 12.25 3C10.0409 3 8.25 4.79086 8.25 7C8.25 9.20914 10.0409 11 12.25 11Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            span Профиль
+          a(href="#")
+            svg(width="23" height="20" viewBox="0 0 23 20" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M19.9201 2.58C19.4184 2.07658 18.8223 1.67714 18.1659 1.40459C17.5095 1.13204 16.8058 0.991745 16.0951 0.991745C15.3844 0.991745 14.6806 1.13204 14.0243 1.40459C13.3679 1.67714 12.7718 2.07658 12.2701 2.58L11.5001 3.36L10.7301 2.58C10.2284 2.07658 9.63229 1.67714 8.97591 1.40459C8.31953 1.13204 7.6158 0.991745 6.90509 0.991745C6.19437 0.991745 5.49065 1.13204 4.83427 1.40459C4.17789 1.67714 3.58176 2.07658 3.08009 2.58C0.960086 4.7 0.830086 8.28 3.50009 11L11.5001 19L19.5001 11C22.1701 8.28 22.0401 4.7 19.9201 2.58Z" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            span Избранное
+          a.b-header-main-link--basket(href="#")
+            svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+              path(d="M9 21.75C9.9665 21.75 10.75 20.9665 10.75 20C10.75 19.0335 9.9665 18.25 9 18.25C8.0335 18.25 7.25 19.0335 7.25 20C7.25 20.9665 8.0335 21.75 9 21.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+              path(d="M18 21.75C18.9665 21.75 19.75 20.9665 19.75 20C19.75 19.0335 18.9665 18.25 18 18.25C17.0335 18.25 16.25 19.0335 16.25 20C16.25 20.9665 17.0335 21.75 18 21.75Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+              path(d="M2.05005 2.05H4.05005L6.71005 14.47C6.80763 14.9249 7.06072 15.3315 7.42576 15.6199C7.7908 15.9082 8.24495 16.0604 8.71005 16.05H18.49C18.9452 16.0493 19.3865 15.8933 19.7411 15.6078C20.0956 15.3224 20.3422 14.9245 20.4401 14.48L22.09 7.05H5.12005" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+            span Корзина
+            p 10
+        .b-header__btns
+          button.b-header__btn.b-header__btn-search(type="button")
+            img(src=require("../../images/components/header/search.svg") alt="search")
+          a.b-header__btn(tel:#)
+            img(src=require("../../images/components/header/whatsapp.svg") alt="wa")
+          a.b-header__btn(href="tel:+78002222342")
+            img(src=require("../../images/components/header/tel.svg") alt="tel")
+          button.b-header__btn.b-header__burger-switcher
+            span
+            span
+            span
+      +burger__menu()
+
+

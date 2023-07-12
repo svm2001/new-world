@@ -1,0 +1,134 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.burger__menu {
+  position: absolute;
+  top: -8px;
+  left: -100%;
+  transition: .4s;
+  height: 100vh;
+  width: 100%;
+  background: vars.$white;
+  z-index: 51;
+  &.active {
+    left: 0;
+  }
+  @include responsive.media-breakpoint-up(1200) {
+    display: none;
+  }
+
+  .burger__city {
+    background: vars.$lightgray2;
+    padding: 12px 13px 12px 16px;
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .burger__city-link {
+    display: flex;
+    align-items: center;
+    img {
+      width: auto;
+      margin-right: 8px;
+    }
+
+    span {
+      font-size: 16px;
+    }
+  }
+
+  .burger__body {
+    padding: 0 16px;
+    background: vars.$white;
+    max-height: calc(100vh - 66px);
+    overflow-y: auto;
+  }
+
+  .burger__links {
+    display: flex;
+    flex-direction: column;
+    .burger__link {
+      display: block;
+      color: vars.$gray;
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .burger_other-links {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    .burger_other-link {
+      font-size: 18px;
+      font-weight: 500;
+      &:not(:nth-last-child(1)) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .burger__contacts {
+    margin-top: 16px;
+    padding-bottom: 80px;
+    .burger__contacts-links {
+      display: flex;
+      flex-direction: column;
+      .burger__contacts-link {
+        position: relative;
+        padding-left: 27px;
+        &:not(:nth-last-child(1)) {
+          margin-bottom: 16px;
+        }
+        &:before {
+          position: absolute;
+          content: '';
+          background-size: 100%;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 20px;
+          height: 20px;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+        }
+      }
+      .burger__contacts-link--mail:before {
+        background-image: url("/src/images/components/header/mail.svg");
+      }
+
+      .burger__contacts-link--tel:before {
+        background-image: url("/src/images/components/header/tel.svg");
+      }
+    }
+    .burger__contacts-soc {
+      margin-top: 27px;
+      display: flex;
+      a {
+        display: block;
+        &:not(:nth-last-child(1)) {
+          margin-right: 12px;
+        }
+        img {
+          max-height: 40px;
+          max-width: 40px ;
+        }
+      }
+    }
+  }
+
+  .slinky-theme-default .next::after, .slinky-theme-default .back::before {
+    background-image: url("/src/images/components/header/arr.svg");
+    opacity: 1;
+  }
+  .slinky-theme-default .next::after, {
+    transform: rotate(270deg);
+  }
+
+  .slinky-theme-default .back::before {
+    transform: rotate(90deg);
+  }
+}

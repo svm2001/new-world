@@ -1,0 +1,385 @@
+extends layouts/Main
+include components/header
+include components/footer
+include components/burger__menu
+include components/breadcrumbs
+
+include components/city__search
+include components/bot__menu
+include components/burger__catalog
+include components/search__goods
+include components/scrollToTop
+include components/pagination
+include components/filter__result-float
+
+block title
+  title Карточка товара
+block content
+  +bot__menu
+  +burger__catalog
+  +city__search
+  +search__goods
+  +scrollToTop
+
+  .wrapper.product
+      +header
+      main
+        .container
+          +breadcrumbs
+          .product__inner
+            .product__wrapper
+              .product__sliders
+                .card__label
+                  .card__label--new NEW
+                  .card__label--discount -30%
+                .product__slider--main(id="productCardSliderMain")
+                    .slide(data-src="assets/images/product1.jpg")
+                        img(src=require("../images/pages/product/product1.jpg") alt="Люстра")
+                    .slide(data-src="assets/images/product2.jpg")
+                        img(src=require("../images/pages/product/product2.jpg") alt="Лампа")
+                    .slide(data-src="assets/images/product3.jpeg")
+                        img(src=require("../images/pages/product/product3.jpeg") alt="Светильник")
+                    .slide(data-src="assets/images/product4.jpeg")
+                        img(src=require("../images/pages/product/product4.jpeg") alt="Описание изображения")
+                    .slide(data-src="assets/images/product5.jpg")
+                        img(src=require("../images/pages/product/product5.jpg") alt="Описание изображения 2")
+                    //.slide(data-src="assets/images/product2.jpg")
+                    //    img(src=require("../images/pages/product/product2.jpg") alt="Лампа")
+                .product__slider--add(id="productCardSliderAdd")
+                  .slide(data-src="assets/images/product1.jpg")
+                    img(src=require("../images/pages/product/product1.jpg") alt="Люстра")
+                  .slide(data-src="assets/images/product2.jpg")
+                    img(src=require("../images/pages/product/product2.jpg") alt="Лампа")
+                  .slide(data-src="assets/images/product3.jpeg")
+                    img(src=require("../images/pages/product/product3.jpeg") alt="Светильник")
+                  .slide(data-src="assets/images/product4.jpeg")
+                    img(src=require("../images/pages/product/product4.jpeg") alt="Описание изображения")
+                  .slide(data-src="assets/images/product5.jpg")
+                    img(src=require("../images/pages/product/product5.jpg") alt="Описание изображения 2")
+                  //.slide(data-src="assets/images/product2.jpg")
+                  //  img(src=require("../images/pages/product/product2.jpg") alt="Лампа")
+              .product__content
+                .product__content-top
+                  .product__availability
+                    img(src=require("../images/components/header/gal-green.svg") alt="icon")
+                    span В наличии
+                  .product__favourite
+                    button.product__favourite-button(title="Добавить в избранное")
+                      svg(width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M13.6134 2.05333C13.2789 1.71771 12.8815 1.45142 12.4439 1.26972C12.0064 1.08802 11.5372 0.994492 11.0634 0.994492C10.5896 0.994492 10.1204 1.08802 9.68284 1.26972C9.24526 1.45142 8.84784 1.71771 8.51339 2.05333L8.00006 2.57333L7.48672 2.05333C7.15227 1.71771 6.75486 1.45142 6.31727 1.26972C5.87968 1.08802 5.41053 0.994492 4.93672 0.994492C4.46291 0.994492 3.99376 1.08802 3.55618 1.26972C3.11859 1.45142 2.72118 1.71771 2.38672 2.05333C0.973391 3.46666 0.886724 5.85333 2.66672 7.66666L8.00006 13L13.3334 7.66666C15.1134 5.85333 15.0267 3.46666 13.6134 2.05333Z" stroke="#FE412D" stroke-linecap="round" stroke-linejoin="round")
+                h1.product__title Свет. техно подвес ЭРА PL12 GX53 BK/SL&nbsp;Б0048544
+                .product__content-main
+                  .product__content-main-inner
+                    .product__content-main-wrapper
+                      .product__characteristic
+                        h2.product__characteristic-title Характеристики
+                        .product__characteristic-row
+                          p Цвет
+                          .product__characteristic-item-separator
+                          p Серый
+                            span.product__characteristic-item-color
+                        .product__characteristic-row
+                          p Поверхность
+                          .product__characteristic-item-separator
+                          p Глянцевая
+                        .product__characteristic-row
+                          p Помещение
+                          .product__characteristic-item-separator
+                          p Для&nbsp;ванной,&nbsp;Для&nbsp;туалета
+                        button(title="Посмотреть все характеристики").js-card-show-all Показать все
+
+
+                    .product__order
+                      .product__price
+                        span.product__current-price 1655 ₽
+                        span.product__price-count /шт
+                        span.product__old-price 12 990 ₽
+                      .product__order-buttons
+                        a.btn.btn--product-basket
+                          span Добавить в корзину
+                          svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M9 21.75C9.9665 21.75 10.75 20.9665 10.75 20C10.75 19.0335 9.9665 18.25 9 18.25C8.0335 18.25 7.25 19.0335 7.25 20C7.25 20.9665 8.0335 21.75 9 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M18 21.75C18.9665 21.75 19.75 20.9665 19.75 20C19.75 19.0335 18.9665 18.25 18 18.25C17.0335 18.25 16.25 19.0335 16.25 20C16.25 20.9665 17.0335 21.75 18 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M2.05005 2.05H4.05005L6.71005 14.47C6.80763 14.9249 7.06072 15.3315 7.42576 15.6199C7.7908 15.9082 8.24495 16.0604 8.71005 16.05H18.49C18.9452 16.0493 19.3865 15.8933 19.7411 15.6078C20.0956 15.3224 20.3422 14.9245 20.4401 14.48L22.09 7.05H5.12005" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                        a.btn.btn--transparent Получить скидку
+                          img(src=require("../images/components/header/actions.svg") alt="action-icon")
+
+                  .product__partners
+                    h2.product__partners-title Являемся партнерами:
+                    .product__partners-wrapper
+                      a.product__partners-link(href="https://www.ozon.ru/" target="_blank" title="Интернет-магазин «OZON»")
+                        img(src=require("../images/pages/product/ozon-icon.svg") alt="ozon")
+                      a.product__partners-link(href="https://market.yandex.ru/" target="_blank" title="Интернет-магазин «Яндекс Маркет»")
+                        img(src=require("../images/pages/product/yandex-icon.svg") alt="yandex")
+                      a.product__partners-link(href="https://www.wildberries.ru/" target="_blank" title="Интернет-магазин «Wildberries»")
+                        img(src=require("../images/pages/product/wb-icon.svg") alt="wildberries")
+            .product__tabs
+              .product__tabs-nav
+                button.product__tabs-nav-btn.product__tabs-nav-btn--active Описание
+                button.product__tabs-nav-btn Доставка
+                button.product__tabs-nav-btn.js-product-tab-characteristic Характеристики
+                button.product__tabs-nav-btn Гарантия и возврат
+                button.product__tabs-nav-btn Сертификаты
+              .product__tabs-content-wrapper
+                .product__tabs-content-item.product__tabs-content-item--desc.product__tabs-content-item--active
+                  p Светильник подвесной PL12&nbsp;GX53&nbsp;BK/SL выполняет не только осветительную функицию, но и является элементом декора. Создаёт неповторимый дизайн и уют в помещении. Подходит как для спален, так и для гостинной, столовой, прихожей комнаты. Цоколь для источника света GX53, напряжение питания 220В ~50/60Гц, материал алюминий, цвет светильника чёрный, размер D96*H200, длинна шнура 1000, максимальная мощность лампы 12 Вт, степень защиты IP20
+                .product__tabs-content-item.product__tabs-content-item--delivery Условия доставки
+                .product__tabs-content-item.product__tabs-content-item--characteristics
+                  div
+                    p Цвет
+                    .product__characteristic-item-separator
+                    p Серый
+                      span.product__characteristic-item-color
+                  div
+                    p Патрон
+                    .product__characteristic-item-separator
+                    p GX53
+                  div
+                    p Размер
+                    .product__characteristic-item-separator
+                    p 38x126 мм
+                  div
+                    p Врезное отверстие
+                    .product__characteristic-item-separator
+                    p 90 мм
+                  div
+                    p Патрон
+                    .product__characteristic-item-separator
+                    p GX53
+                  div
+                    p Тип
+                    .product__characteristic-item-separator
+                    p Встраиваемый
+                  div
+                    p Размер
+                    .product__characteristic-item-separator
+                    p 38x126 мм
+                  div
+                    p Врезное отверстие
+                    .product__characteristic-item-separator
+                    p 90 мм
+                  div
+                    p Патрон
+                    .product__characteristic-item-separator
+                    p GX53
+                  div
+                    p Тип
+                    .product__characteristic-item-separator
+                    p Встраиваемый
+                  div
+                    p Размер
+                    .product__characteristic-item-separator
+                    p 38x126 мм
+                  div
+                    p Врезное отверстие
+                    .product__characteristic-item-separator
+                    p 90 мм
+                .product__tabs-content-item.product__tabs-content-item--guarantee
+                  div
+                    p
+                      strong Возврат товара надлежащего качества
+                    ul
+                      li Клиент вправе отказаться от заказанного Товара в любое время до его получения, а после получения Товара — в течение 14 (четырнадцати) дней, не считая дня покупки.
+                      li Возврат Товара надлежащего качества возможен в случае, если сохранены его товарный вид, потребительские свойства, а также документ, подтверждающий факт и условия покупки указанного Товара.
+                      li Клиент не вправе отказаться от Товара, имеющего индивидуально-определённые свойства, если указанный Товар может быть использован исключительно приобретающим его Клиентом.
+                      li При отказе Клиента от Товара надлежащего качества Продавец должен возвратить ему денежную сумму, уплаченную потребителем по договору, за исключением расходов продавца на доставку от потребителя возвращённого товара, не позднее чем через 10 дней со дня предъявления потребителем соответствующего требования. Возврат товара ненадлежащего качества Под товаром ненадлежащего качества подразумевается товар, не способный обеспечить свои функциональные качества из-за существенного недостатка (с наличием дефектов/брака).
+                  div
+                    p
+                      strong Покупатель, которому продан товар ненадлежащего качества, если это не было оговорено продавцом, вправе по своему выбору заявить любое из нижеперечисленных требований
+                    ul
+                      li замены на товар аналогичной марки (модели, артикула) или на такой же товар другой марки (модели, артикула) с соответствующим перерасчетом покупной цены;
+                      li соразмерного уменьшения покупной цены;
+                      li безвозмездного устранения недостатков товара или возмещения расходов на их исправление покупателем или третьим лицом;
+                      li вправе отказаться от исполнения договора и потребовать возврата уплаченной за товар суммы.
+                  div
+                    p
+                      strong При возврате технически сложного товара ненадлежащего качества (перечень таких товаров утвержден Постановлением Правительства РФ от 10.11.2011 № 924 «Об утверждении перечня технически сложных товаров») Покупатель имеет право потребовать:
+                    ul
+                      li замены на товар аналогичной марки (модели, артикула) или на такой же товар другой марки (модели, артикула) с соответствующим перерасчетом покупной цены;
+                      li отказаться от исполнения договора и потребовать возврата уплаченной за товар суммы.
+                  div
+                    p
+                      strong Все вышеперечисленные требования по возврату товара ненадлежащего качества могут быть предъявлены в следующие сроки:
+                    ul
+                      li на товар установлен гарантийный срок — в течение всего гарантийного срока;
+                      li на товар не установлен гарантийный срок — в течение разумного срока, но не более 1 года.
+
+                .product__tabs-content-item.product__tabs-content-item--sertificates
+                  .product__sertificates-wrapper
+                    a(href="javascript:void(0);" download) Сертификат о соответствии
+                      img.mainSlider__img(src=require("../icons/pdf.svg") alt="pdf-icon")
+                    a(href="javascript:void(0);" download) Сертификат безопасности
+                      img.mainSlider__img(src=require("../icons/pdf.svg") alt="pdf-icon")
+                    a(href="javascript:void(0);" download) Сертификат1343
+                      img.mainSlider__img(src=require("../icons/pdf.svg") alt="pdf-icon")
+        section.bestPrice
+          .container
+            h2.h2.h2--flex Похожие товары
+            .best__price-slider
+              .swiper-wrapper
+                - for (var i = 0; i < 10; ++i) {
+                .swiper-slide
+                  .card
+                    .card__wrapper
+                      .card__label
+                        .card__label--new NEW
+                        .card__label--discount -30%
+                      button(type="button").card__favourite
+                        svg(width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M13.6134 2.05333C13.2789 1.71771 12.8815 1.45142 12.4439 1.26972C12.0064 1.08802 11.5372 0.994492 11.0634 0.994492C10.5896 0.994492 10.1204 1.08802 9.68284 1.26972C9.24526 1.45142 8.84784 1.71771 8.51339 2.05333L8.00006 2.57333L7.48672 2.05333C7.15227 1.71771 6.75486 1.45142 6.31727 1.26972C5.87968 1.08802 5.41053 0.994492 4.93672 0.994492C4.46291 0.994492 3.99376 1.08802 3.55618 1.26972C3.11859 1.45142 2.72118 1.71771 2.38672 2.05333C0.973391 3.46666 0.886724 5.85333 2.66672 7.66666L8.00006 13L13.3334 7.66666C15.1134 5.85333 15.0267 3.46666 13.6134 2.05333Z" stroke="#A3A3A3" stroke-linecap="round" stroke-linejoin="round")
+                      .product-card_img-slider_container
+                        .product-card_img-slider
+                          .product-card_img-container
+                            img(src=require("../images/pages/main/card/1.jpg") alt="prod").product-card_img.active-img
+                            img(src=require("../images/pages/main/card/2.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/3.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/4.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/no_image.png") alt="prod").product-card_img
+                          .product-card_img-sectors
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                        .product-card_dots
+                          .product-card_dot.active-dot
+                          .product-card_dot
+                          .product-card_dot
+                          .product-card_dot
+                          .product-card_dot
+                      .card__img-slider
+                        .swiper-wrapper
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/1.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/2.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/2.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/3.jpg") alt="card")
+                          .swiper-slide.no_image
+                            img.no_image(src=require("../images/pages/main/card/no_image.png") alt="no-card")
+                        .swiper-pagination
+                      .card__content
+                        .card__availability
+                          .card__availability--yes
+                            | В наличии
+                          .card__availability--no
+                            | Нет в наличии
+                        a(href="javascript:void(0);").card__title Свет. люстра подвес LEEK LED GAMMA 118W и еще какой-то доп. текст, а также имя товара с длинным названием, которое будет ограничено
+                        .card__price
+                          .card__price--current 9 990 ₽ шт
+                          .card__price--old 12 990 ₽
+                        button.card__add-btn.btn
+                          span В корзину
+                          svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M9 21.75C9.9665 21.75 10.75 20.9665 10.75 20C10.75 19.0335 9.9665 18.25 9 18.25C8.0335 18.25 7.25 19.0335 7.25 20C7.25 20.9665 8.0335 21.75 9 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M18 21.75C18.9665 21.75 19.75 20.9665 19.75 20C19.75 19.0335 18.9665 18.25 18 18.25C17.0335 18.25 16.25 19.0335 16.25 20C16.25 20.9665 17.0335 21.75 18 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M2.05005 2.05H4.05005L6.71005 14.47C6.80763 14.9249 7.06072 15.3315 7.42576 15.6199C7.7908 15.9082 8.24495 16.0604 8.71005 16.05H18.49C18.9452 16.0493 19.3865 15.8933 19.7411 15.6078C20.0956 15.3224 20.3422 14.9245 20.4401 14.48L22.09 7.05H5.12005" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+
+                - }
+              .swiper-scrollbar
+              .swiper-arrows
+                .arrow-left(title="Назад")
+                .arrow-right(title="Вперед")
+
+        section.bestPrice
+          .container
+            h2.h2.h2--flex Просмотренные товары
+            .best__price-slider
+              .swiper-wrapper
+                - for (var i = 0; i < 10; ++i) {
+                .swiper-slide
+                  .card
+                    .card__wrapper
+                      .card__label
+                        .card__label--new NEW
+                        .card__label--discount -30%
+                      button(type="button").card__favourite
+                        svg(width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M13.6134 2.05333C13.2789 1.71771 12.8815 1.45142 12.4439 1.26972C12.0064 1.08802 11.5372 0.994492 11.0634 0.994492C10.5896 0.994492 10.1204 1.08802 9.68284 1.26972C9.24526 1.45142 8.84784 1.71771 8.51339 2.05333L8.00006 2.57333L7.48672 2.05333C7.15227 1.71771 6.75486 1.45142 6.31727 1.26972C5.87968 1.08802 5.41053 0.994492 4.93672 0.994492C4.46291 0.994492 3.99376 1.08802 3.55618 1.26972C3.11859 1.45142 2.72118 1.71771 2.38672 2.05333C0.973391 3.46666 0.886724 5.85333 2.66672 7.66666L8.00006 13L13.3334 7.66666C15.1134 5.85333 15.0267 3.46666 13.6134 2.05333Z" stroke="#A3A3A3" stroke-linecap="round" stroke-linejoin="round")
+                      .product-card_img-slider_container
+                        .product-card_img-slider
+                          .product-card_img-container
+                            img(src=require("../images/pages/main/card/1.jpg") alt="prod").product-card_img.active-img
+                            img(src=require("../images/pages/main/card/2.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/3.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/4.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/no_image.png") alt="prod").product-card_img
+                          .product-card_img-sectors
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                        .product-card_dots
+                          .product-card_dot.active-dot
+                          .product-card_dot
+                          .product-card_dot
+                          .product-card_dot
+                          .product-card_dot
+                      .card__img-slider
+                        .swiper-wrapper
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/1.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/2.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/2.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/3.jpg") alt="card")
+                          .swiper-slide.no_image
+                            img.no_image(src=require("../images/pages/main/card/no_image.png") alt="no-card")
+                        .swiper-pagination
+                      .card__content
+                        .card__availability
+                          .card__availability--yes
+                            | В наличии
+                          .card__availability--no
+                            | Нет в наличии
+                        a(href="javascript:void(0);").card__title Свет. люстра подвес LEEK LED GAMMA 118W и еще какой-то доп. текст, а также имя товара с длинным названием, которое будет ограничено
+                        .card__price
+                          .card__price--current 9 990 ₽ шт
+                          .card__price--old 12 990 ₽
+                        button.card__add-btn.btn
+                          span В корзину
+                          svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M9 21.75C9.9665 21.75 10.75 20.9665 10.75 20C10.75 19.0335 9.9665 18.25 9 18.25C8.0335 18.25 7.25 19.0335 7.25 20C7.25 20.9665 8.0335 21.75 9 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M18 21.75C18.9665 21.75 19.75 20.9665 19.75 20C19.75 19.0335 18.9665 18.25 18 18.25C17.0335 18.25 16.25 19.0335 16.25 20C16.25 20.9665 17.0335 21.75 18 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M2.05005 2.05H4.05005L6.71005 14.47C6.80763 14.9249 7.06072 15.3315 7.42576 15.6199C7.7908 15.9082 8.24495 16.0604 8.71005 16.05H18.49C18.9452 16.0493 19.3865 15.8933 19.7411 15.6078C20.0956 15.3224 20.3422 14.9245 20.4401 14.48L22.09 7.05H5.12005" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+
+                - }
+              .swiper-scrollbar
+              .swiper-arrows
+                .arrow-left(title="Назад")
+                .arrow-right(title="Вперед")
+
+        section.main-about
+          .container
+            .main-about__video
+              iframe(width="100%" height="200px" src="https://www.youtube.com/embed/Sk9fDbNvQHM" title="Сеть магазинов «Новый мир»" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+              .main-about__video-duration
+                span.main-about__video-duration-mins
+                span :
+                span.main-about__video-duration-secs
+              img.main-about__video-plug(src=require("../images/pages/main/video/bg.jpg") alt="video")
+              img.main-about__video-plug-play(src=require("../images/pages/main/video/play.svg") alt="play")
+            .main-about__video-wrapper
+              h2.h2 Сеть магазинов «Новый мир»
+              .main-about__text-wrapper
+                p «Новый мир» – это красиво оформленные просторные магазины с большим ассортиментом и безупречным качеством обслуживания.
+                p Ниша, которую мы занимаем — это золотая середина. У нас не маленькие магазины, где отсутствует широкий ассортимент, но и не такие огромные, где теряется тщательность отбора товара и обслуживания клиентов.
+                p «Новый мир» – это красиво оформленные просторные магазины с большим ассортиментом и безупречным качеством обслуживания.
+                p Ниша, которую мы занимаем — это золотая середина. У нас не маленькие магазины, где отсутствует широкий ассортимент, но и не такие огромные, где теряется тщательность отбора товара и обслуживания клиентов.
+              .main-about__text-controls
+                button(type="button").main-about__text-btn Подробнее
+                .main-about__text-plug &nbsp;
+      +footer
+
+
+
+
+
+
+
+

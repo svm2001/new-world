@@ -1,0 +1,387 @@
+extends layouts/Main
+include components/header
+include components/footer
+include components/burger__menu
+include components/breadcrumbs
+
+include components/city__search
+include components/bot__menu
+include components/burger__catalog
+include components/search__goods
+include components/scrollToTop
+include components/pagination
+include components/filter__result-float
+
+block title
+  title Каталог товаров
+block content
+  +bot__menu
+  +burger__catalog
+  +city__search
+  +search__goods
+  +scrollToTop
+
+  .wrapper.catalog
+      +header
+      main
+        .container
+          +breadcrumbs
+          h1 Обои для стен
+            span 1243 товаров
+          .catalog__body
+            .catalog__filters-wrapper
+              .catalog__filters-top
+                a.catalog__filters-reset(href="javascript:void(0);") Сбросить
+                span Фильтры
+                button.catalog__filters-close
+              .catalog__filters
+                .catalog__filter-container
+                  .ac
+                    button.ac-header
+                      .ac-trigger Категории
+                    .ac-panel
+                      .catalog__filters-inner-container
+                        a(href="javascript:void(0);") Обои для стен
+                        a(href="javascript:void(0);") Обои под покраску
+                        a(href="javascript:void(0);") Жидкие обои
+                        a(href="javascript:void(0);") Фрески
+                        a(href="javascript:void(0);") Фотообои
+                        a(href="javascript:void(0);") Клей и герметики
+                      button.catalog__filters-links-show-all Показать все
+                  .ac
+                    button.ac-header
+                      .ac-trigger Цена
+                    .ac-panel
+                      .slider-range(id="slider-price")
+                      .filter__price-wrapper
+                        input(type="number"
+                          placeholder="от 500 ₽"
+                          value=""
+                          min=""
+                          maxlength=7
+                          max=""
+                          id="input_min").input_num.input_min
+                        input(type="number"
+                          placeholder="от 50 000 ₽"
+                          value=""
+                          min=""
+                          maxlength=7
+                          max=""
+                          id="input_max").input_num.input_max
+                  .ac
+                    button.ac-header
+                      .ac-trigger Помещение
+                    .ac-panel
+                      .catalog__checkbox-check-all-wrapper
+                        input(type="checkbox" name="catalog-group-1" id="checkbox-1").catalog__checkbox-check-all
+                        label(for="checkbox-1").catalog__checkbox-check-all-label
+                          span Выбрать все
+                      .catalog__checkbox-wrapper
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-1" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-1") Гостинная
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-2" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-2") Детская
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-3" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-3") Кухня
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-4" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-4") Спальня
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-5" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-5") Прихожая
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-6" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-6") Ванная комната
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-1-7" name="catalog-group-1")
+                          label.catalog__checkbox-label(for="checkbox-1-7") Туалет
+                      button.catalog__checkbox-show-all Показать все
+                  .ac
+                    button.ac-header
+                      .ac-trigger Производитель
+                    .ac-panel
+                      .catalog__checkbox-check-all-wrapper
+                        input(type="checkbox" name="catalog-group-3" id="checkbox-3").catalog__checkbox-check-all
+                        label(for="checkbox-3").catalog__checkbox-check-all-label
+                          span Выбрать все
+                      .catalog__checkbox-wrapper
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-1" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-1") FREYA
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-2" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-2") Leek
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-3" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-3") Nortex
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-4" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-4") Grandeco
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-5" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-5") Nortex
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-6" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-6") value_6
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-7" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-7") value_7
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-8" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-8") value_8
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-9" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-9") value_9
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-10" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-10") value_10
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-11" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-11") value_11
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-12" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-12") value_12
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-13" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-13") value_13
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-14" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-14") value_14
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-15" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-15") value_15
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-16" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-16") value_16
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-17" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-17") value_17
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-18" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-18") value_18
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-19" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-19") value_19
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-20" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-20") value_20
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-3-21" name="catalog-group-3")
+                          label.catalog__checkbox-label(for="checkbox-3-21") value_21
+                      button.catalog__checkbox-show-all Показать все
+                  .ac
+                    button.ac-header
+                      .ac-trigger Площадь освещения, м
+                    .ac-panel
+                      .catalog__checkbox-check-all-wrapper
+                        input(type="checkbox" name="catalog-group-2" id="checkbox-2").catalog__checkbox-check-all
+                        label(for="checkbox-2").catalog__checkbox-check-all-label
+                          span Выбрать все
+                      .catalog__checkbox-wrapper
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-2-1" name="catalog-group-2")
+                          label.catalog__checkbox-label(for="checkbox-2-1") 10-20
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-2-2" name="catalog-group-2")
+                          label.catalog__checkbox-label(for="checkbox-2-2") От 30
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-2-3" name="catalog-group-2")
+                          label.catalog__checkbox-label(for="checkbox-2-3") От 50
+                      button.catalog__checkbox-show-all Показать все
+                  .ac
+                    button.ac-header
+                      .ac-trigger Свет
+                    .ac-panel
+                      .catalog__checkbox-check-all-wrapper
+                        input(type="checkbox" name="catalog-group-4" id="checkbox-4").catalog__checkbox-check-all
+                        label(for="checkbox-4").catalog__checkbox-check-all-label
+                          span Выбрать все
+                      .catalog__checkbox-wrapper
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-4-1" name="catalog-group-2")
+                          label.catalog__checkbox-label(for="checkbox-4-1") Регулируемый (3000-6500K)
+                      button.catalog__checkbox-show-all Показать все
+                  .ac
+                    button.ac-header
+                      .ac-trigger Цвет
+                    .ac-panel
+                      .catalog__checkbox-check-all-wrapper
+                        input(type="checkbox" name="catalog-group-5" id="checkbox-5").catalog__checkbox-check-all
+                        label(for="checkbox-5").catalog__checkbox-check-all-label
+                          span Выбрать все
+                      .catalog__checkbox-wrapper
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-1" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-1") Белый
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-2" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-2") Бежевый
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-3" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-3") Черный
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-4" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-4") Красный
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-5" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-5") Золотой
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-6" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-6") Серый
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-7" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-7") Желтый
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-8" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-8") Синий
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-9" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-9") Зеленый
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-10" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-10") Серый
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-11" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-11") value_11
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-12" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-12") value_12
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-13" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-13") value_13
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-14" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-14") value_14
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-15" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-15") value_15
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-16" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-16") value_16
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-17" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-17") value_17
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-18" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-18") value_18
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-19" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-19") value_19
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-20" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-20") value_20
+                        .catalog__checkbox-wrapper-inner
+                          input(type="checkbox" id="checkbox-5-21" name="catalog-group-5")
+                          label.catalog__checkbox-label(for="checkbox-5-21") value_21
+                      button.catalog__checkbox-show-all Показать все
+              +filter__result-float
+              .catalog__result
+                button.btn Показать 1200 товаров
+                button.btn--white Сбросить
+            .catalog__inner
+              .catalog__sort-wrapper
+                select.catalog__sort.js-catalog-sort(name="catalog-sort")
+                  option По популярности
+                  option По новизне
+                  option По возрастанию цены
+                  option По убыванию цены
+                button.catalog__filter-btn--main
+                  span Фильтры
+                  img(src=require("../images/components/filter.svg") alt="filter-icon")
+              .catalog__card-list
+                - for (var i = 0; i < 21; ++i) {
+                  .card.catalog__card
+                    .card__wrapper
+                      .card__label
+                        .card__label--new NEW
+                        .card__label--discount -30%
+                      button(type="button").card__favourite
+                        svg(width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg")
+                          path(d="M13.6134 2.05333C13.2789 1.71771 12.8815 1.45142 12.4439 1.26972C12.0064 1.08802 11.5372 0.994492 11.0634 0.994492C10.5896 0.994492 10.1204 1.08802 9.68284 1.26972C9.24526 1.45142 8.84784 1.71771 8.51339 2.05333L8.00006 2.57333L7.48672 2.05333C7.15227 1.71771 6.75486 1.45142 6.31727 1.26972C5.87968 1.08802 5.41053 0.994492 4.93672 0.994492C4.46291 0.994492 3.99376 1.08802 3.55618 1.26972C3.11859 1.45142 2.72118 1.71771 2.38672 2.05333C0.973391 3.46666 0.886724 5.85333 2.66672 7.66666L8.00006 13L13.3334 7.66666C15.1134 5.85333 15.0267 3.46666 13.6134 2.05333Z" stroke="#A3A3A3" stroke-linecap="round" stroke-linejoin="round")
+                      .product-card_img-slider_container
+                        .product-card_img-slider
+                          .product-card_img-container
+                            img(src=require("../images/pages/main/card/1.jpg") alt="prod").product-card_img.active-img
+                            img(src=require("../images/pages/main/card/2.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/3.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/4.jpg") alt="prod").product-card_img
+                            img(src=require("../images/pages/main/card/no_image.png") alt="prod").product-card_img
+                          .product-card_img-sectors
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                            .product-card_img-sector
+                        .product-card_dots
+                          .product-card_dot.active-dot
+                          .product-card_dot
+                          .product-card_dot
+                          .product-card_dot
+                          .product-card_dot
+                      .card__img-slider
+                        .swiper-wrapper
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/1.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/2.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/2.jpg") alt="card")
+                          .swiper-slide
+                            img(src=require("../images/pages/main/card/3.jpg") alt="card")
+                          .swiper-slide.no_image
+                            img.no_image(src=require("../images/pages/main/card/no_image.png") alt="no-card")
+                        .swiper-pagination
+                      .card__content
+                        .card__availability
+                          .card__availability--yes
+                            | В наличии
+                          .card__availability--no
+                            | Нет в наличии
+                        a(href="javascript:void(0);").card__title Свет. люстра подвес LEEK LED GAMMA 118W и еще какой-то доп. текст, а также имя товара с длинным названием, которое будет ограничено
+                        .card__price
+                          .card__price--current 9 990 ₽ шт
+                          .card__price--old 12 990 ₽
+                        button.card__add-btn.btn
+                          span В корзину
+                          svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                            path(d="M9 21.75C9.9665 21.75 10.75 20.9665 10.75 20C10.75 19.0335 9.9665 18.25 9 18.25C8.0335 18.25 7.25 19.0335 7.25 20C7.25 20.9665 8.0335 21.75 9 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M18 21.75C18.9665 21.75 19.75 20.9665 19.75 20C19.75 19.0335 18.9665 18.25 18 18.25C17.0335 18.25 16.25 19.0335 16.25 20C16.25 20.9665 17.0335 21.75 18 21.75Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                            path(d="M2.05005 2.05H4.05005L6.71005 14.47C6.80763 14.9249 7.06072 15.3315 7.42576 15.6199C7.7908 15.9082 8.24495 16.0604 8.71005 16.05H18.49C18.9452 16.0493 19.3865 15.8933 19.7411 15.6078C20.0956 15.3224 20.3422 14.9245 20.4401 14.48L22.09 7.05H5.12005" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+
+                - }
+
+              .catalog__bot
+                +pagination
+                button.btn--white Показать ещё
+        section.main-about
+          .container
+            .main-about__video
+              iframe(width="100%" height="200px" src="https://www.youtube.com/embed/Sk9fDbNvQHM" title="Сеть магазинов «Новый мир»" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen)
+              .main-about__video-duration
+                span.main-about__video-duration-mins
+                span :
+                span.main-about__video-duration-secs
+              img.main-about__video-plug(src=require("../images/pages/main/video/bg.jpg") alt="video")
+              img.main-about__video-plug-play(src=require("../images/pages/main/video/play.svg") alt="play")
+            .main-about__video-wrapper
+              h2.h2 Сеть магазинов «Новый мир»
+              .main-about__text-wrapper
+                p «Новый мир» – это красиво оформленные просторные магазины с большим ассортиментом и безупречным качеством обслуживания.
+                p Ниша, которую мы занимаем — это золотая середина. У нас не маленькие магазины, где отсутствует широкий ассортимент, но и не такие огромные, где теряется тщательность отбора товара и обслуживания клиентов.
+                p «Новый мир» – это красиво оформленные просторные магазины с большим ассортиментом и безупречным качеством обслуживания.
+                p Ниша, которую мы занимаем — это золотая середина. У нас не маленькие магазины, где отсутствует широкий ассортимент, но и не такие огромные, где теряется тщательность отбора товара и обслуживания клиентов.
+              .main-about__text-controls
+                button(type="button").main-about__text-btn Подробнее
+                .main-about__text-plug &nbsp;
+      +footer
+
+
+
+
+
+
+
+

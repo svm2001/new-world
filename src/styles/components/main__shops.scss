@@ -1,0 +1,126 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.main-shops {
+  background: vars.$lightgray2;
+  border-radius: 12px;
+  &__all-link {
+    margin-top: 25px;
+    width: 100%;
+  }
+  &__slider {
+    position: relative;
+    @include responsive.media-breakpoint-up(568) {
+      padding-bottom: 40px;
+    }
+    @include responsive.media-breakpoint-up(1024) {
+      padding-bottom: 0;
+    }
+    .swiper-pagination {
+      bottom: auto;
+      top: 170px;
+      z-index: 3;
+      @include responsive.media-breakpoint-up(568) {
+        top: 427px;
+      }
+      .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: vars.$white;
+      }
+    }
+    .swiper-slide {
+      background: vars.$white;
+      border-radius: 0 0 12px 12px;
+    }
+  }
+  &__slider-img-wrapper {
+    position: relative;
+    max-height: 203px;
+    min-height: 203px;
+
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+    @include responsive.media-breakpoint-up(568) {
+      max-height: 230px;
+      min-height: 230px;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(22, 20, 22, 0.27);
+    }
+    img {
+      max-height: 203px;
+      min-height: 203px;
+      @include responsive.media-breakpoint-up(568) {
+        max-height: 230px;
+        min-height: 230px;
+      }
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__slider-content {
+    padding: 16px;
+  }
+
+  &__slider-name {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    white-space: nowrap;
+  }
+
+  &__slider-address {
+    color: vars.$gray;
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+
+  &__slider-subtitle {
+    color: vars.$gray;
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
+
+  &__slider-working-time {
+    display: flex;
+    margin-bottom: 12px;
+    span {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      &:nth-child(1) {
+        margin-right: 4px;
+      }
+    }
+  }
+
+  &__slider-link {
+    color: vars.$red;
+    font-size: 16px;
+    position: relative;
+    display: inline;
+    transition: .3s;
+    &:hover {
+      color: vars.$gray;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      right: -23px;
+      background-image: url("/src/images/pages/main/shops/pinn.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}

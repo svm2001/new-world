@@ -1,0 +1,230 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.footer {
+  background: vars.$lightgray2;
+  padding: 40px 0 66px 0;
+  .burger__menu {
+    position: static;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background: vars.$lightgray2;
+  }
+
+  .burger__body {
+    background: vars.$lightgray2;
+    max-height: 100%;
+    overflow: visible;
+  }
+
+  .burger__contacts {
+    padding-bottom: 0;
+  }
+
+  .burger__body {
+    padding: 0;
+  }
+
+  &__logo {
+    width: 181px;
+    min-width: 181px;
+    //padding: 0 16px;
+    transition: .3s;
+    img {
+      width: 100%;
+    }
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__payments {
+    width: 100%;
+    padding: 30px 0 20px 0;
+    border-bottom: 1px solid vars.$lightgray;
+    img {
+      max-width: 199px;
+    }
+  }
+
+  &__final {
+    padding: 20px 0;
+    p,a {
+      font-size: 14px;
+      color: vars.$gray;
+    }
+
+    p, a:nth-child(2) {
+      margin-bottom: 6px;
+    }
+  }
+
+  &__desk {
+    display: none;
+  }
+
+  @include responsive.media-breakpoint-up(768) {
+    .burger__body {
+      display: none;
+    }
+
+    &__logo {
+      padding: 0;
+    }
+
+    &__desk {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 28px;
+
+      a {
+        color: vars.$black;
+        &:hover {
+          color: vars.$red;
+        }
+      }
+
+      &-col:nth-child(4) {
+        flex-basis: 100%;
+        margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        padding-bottom: 10px;
+        .footer__desk-last {
+          display: flex;
+          align-items: center;
+          p, a {
+            font-size: 12px;
+            color: vars.$gray;
+            margin-right: 20px;
+            margin-bottom: 0;
+          }
+
+          a:hover {
+            color: vars.$red;
+          }
+
+          a:nth-last-child(1) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &-col {
+        display: flex;
+        flex-direction: column;
+        a:not(:nth-last-child(1)) {
+          margin-bottom: 12px;
+        }
+
+        a {
+          font-size: 14px;
+          position: relative;
+        }
+      }
+
+      &-soc {
+        display: flex;
+        width: 191px;
+        justify-content: space-between;
+        margin-top: 20px;
+        a {
+          margin-bottom: 0;
+        }
+      }
+
+
+      &-mail, &-tel {
+        padding-left: 26px;
+      }
+
+      &-mail:before, &-tel:before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      &-mail:before {
+        background-image: url("/src/images/components/header/mail.svg");
+      }
+
+      &-tel:before {
+        background-image: url("/src/images/components/header/tel.svg");
+      }
+
+
+    }
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    padding: 40px 22px;
+    .burger__menu {
+      display: flex;
+
+      .footer__logo {
+        flex-basis: 30%;
+        height: fit-content;
+        img {
+          max-width: 200px;
+        }
+      }
+
+      .footer__desk {
+        flex-basis: 70%;
+      }
+
+      .footer__desk .footer__desk-col:nth-last-child(1) {
+        position: absolute;
+        bottom: -35px;
+        width: 100%;
+        left: 0;
+        padding: 10px 0;
+        border-top: 1px solid vars.$lightgray;
+        img {
+          max-width: 140px;
+        }
+      }
+
+      .footer__desk .footer__desk-col:nth-child(1),
+      .footer__desk .footer__desk-col:nth-child(2),
+      .footer__desk .footer__desk-col:nth-child(3) {
+        flex-basis: 33.33%;
+      }
+
+      .footer__desk-last {
+        flex-basis: 100%;
+      }
+
+      .footer__desk {
+        margin-top: 0;
+        margin-bottom: 44px;
+      }
+    }
+  }
+}
+
+@include responsive.media-breakpoint-up(1400) {
+  html body .footer .container .burger__menu .footer__logo {
+    flex-basis: 45%;
+  }
+
+  html body .footer .container .burger__menu .footer__desk {
+    flex-basis: 55%;
+  }
+}
+
+.footer__desk-col h4 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,37 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  &__item {
+    font-size: 16px;
+    transition: .3s;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 999px;
+    margin-right: 10px;
+    &:hover {
+      background: vars.$lightgray;
+    }
+    &.active {
+      background: vars.$lightgray2;
+      cursor: default;
+    }
+  }
+  span {
+    margin-right: 10px;
+  }
+
+  @include responsive.media-breakpoint-down(576) {
+    &__item {
+      margin-right: 0;
+    }
+    span {
+      margin-left: 10px;
+    }
+  }
+}

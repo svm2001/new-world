@@ -1,0 +1,27 @@
+mixin search__goods()
+  .search__goods.city__search
+    .city__search-title.search__goods-title
+      p Что вы ищете?
+      button(type="button")
+        img(src=require("../../images/components/header/close.svg") alt="close")
+    form
+      label(for="goodsSearch").city__search-label.search__goods-label
+        input(type="search" id="goodsSearch" placeholder="Поиск товара").city__search-input
+    .search__goods-clue
+      a(href="javascript:void(0);").search__goods-clue-item люстра
+      a(href="javascript:void(0);").search__goods-clue-item свет
+      a(href="javascript:void(0);").search__goods-clue-item бра
+      a(href="javascript:void(0);").search__goods-clue-item плафон
+      a(href="javascript:void(0);").search__goods-clue-item лампочки
+      a(href="javascript:void(0);").search__goods-clue-item cветильники
+      a(href="javascript:void(0);").search__goods-clue-item value_7
+      a(href="javascript:void(0);").search__goods-clue-item value_8
+
+    .city__search-result.search__goods-result
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") Лампа
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") Светильник
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") value_3
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") value_4
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") value_5
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") value_6
+      a.search__goods-result-item.city__search-result-item(href="javascript:void(0);") value_7

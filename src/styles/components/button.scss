@@ -1,3 +1,4 @@
+@use '../mixins/responsive';
 @use "../vars";
 
 .btn {
@@ -8,42 +9,120 @@
   border-radius: 8px;
   transition: .3s;
   border: 1px solid vars.$red;
+  text-align: center;
   &:hover {
     background: vars.$white;
     color: vars.$red;
   }
+  &:active {
+    transform: scale(.95);
+  }
+  &--reverse {
+    background: vars.$white;
+    padding: 13px 29px;
+    font-size: 16px;
+    color: vars.$red;
+    border-radius: 8px;
+    transition: .3s;
+    border: 1px solid vars.$red;
+    text-align: center;
+    &:hover {
+      background: vars.$red;
+      color: vars.$white;
+    }
+    &:active {
+      transform: scale(.9);
+    }
+
+    @include responsive.media-breakpoint-up(768) {
+      padding: 8px 29px 8px 16px
+    }
+  }
+
+  &--white {
+    background: vars.$white;
+    padding: 12px 29px;
+    font-size: 16px;
+    color: vars.$black;
+    border-radius: 8px;
+    transition: .3s;
+    border: 1px solid vars.$lightgray;
+    text-align: center;
+
+    &:hover {
+      background: vars.$red;
+      color: vars.$white;
+    }
+
+    &:active {
+      transform: scale(.95);
+    }
+  }
+
+  &--watch-all {
+    display: block;
+    margin: 50px auto 0 auto;
+    span {
+      color: vars.$red;
+      position: relative;
+      transition: .3s;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 5px;
+        transform: rotate(270deg);
+        right: -20px;
+        background-image: url("/src/images/components/header/arr.svg");
+        background-size: 14px;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 14px;
+        height: 14px;
+        transition: .3s;
+      }
+    }
+
+    &--desk {
+      display: none;
+    }
+
+    &:hover span {
+      color: vars.$white;
+      &:before {
+        background-image: url("/src/images/components/header/arr-white.svg");
+      }
+    }
+    &:active {
+      transform: scale(.9);
+    }
+  }
 }
 
-.btn--reverse {
-  background: vars.$white;
-  padding: 13px 29px;
-  font-size: 16px;
-  color: vars.$red;
-  border-radius: 8px;
-  transition: .3s;
-  border: 1px solid vars.$red;
-  &:hover {
-    background: vars.$red;
-    color: vars.$white;
+@include responsive.media-breakpoint-up(768) {
+  html .btn--watch-all {
+    display: none;
   }
-  &:active {
-    background: vars.$redActive;
+
+  html .btn--watch-all--desk {
+    display: block;
+    position: absolute;
+    margin: 0;
+    right: 20px;
+    top: 0;
+    &:active {
+      transform: scale(0.97)
+    }
   }
 }
 
-.btn--white {
-  background: vars.$white;
-  padding: 13px 29px;
-  font-size: 16px;
-  color: vars.$black;
-  border-radius: 8px;
-  transition: .3s;
-  border: 1px solid vars.$lightgray;
-  &:hover {
-    background: vars.$red;
-    color: vars.$white;
+@include responsive.media-breakpoint-up(1024) {
+  html .btn--watch-all--desk {
+    top: 2px;
   }
-  &:active {
-    background: vars.$redActive;
+}
+
+@include responsive.media-breakpoint-up(1200) {
+  html .btn--watch-all--desk {
+    top: 4px;
   }
 }

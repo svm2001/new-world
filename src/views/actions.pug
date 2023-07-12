@@ -1,0 +1,72 @@
+extends layouts/Main
+include components/header
+include components/footer
+include components/burger__menu
+include components/breadcrumbs
+
+include components/city__search
+include components/bot__menu
+include components/burger__catalog
+include components/search__goods
+include components/scrollToTop
+include components/pagination
+include components/filter__result-float
+
+block title
+  title Акции
+block content
+  +bot__menu
+  +burger__catalog
+  +city__search
+  +search__goods
+  +scrollToTop
+
+  .wrapper.product
+      +header
+      main
+        .container
+          +breadcrumbs
+
+          .action
+            h1 Акции
+            .action__list
+              a(href="javascript:void(0);").action__item.action__item--light(style="background-color: #00ADEF;")
+                .action__item-label(style="background: #FFCA00; box-shadow: 0px 4px 28px 0px rgba(255, 202, 0, 0.30);")
+                  span -30%
+                h3.action__item-title Распродажа
+                  br
+                  |светильников Leek
+                span.action__item-date До 30.07.2023
+                img.action__item-img.custom-img(src=require("../images/pages/actions/action_1.png") alt="action_img")
+
+              a(href="javascript:void(0);").action__item.action__item--dark(style="background-color: #FBE303;")
+                h3.action__item-title Скидки по&nbsp;летнему!
+                  br
+                  | На&nbsp;весь июнь
+                span.action__item-date До 30.07.2023
+                img.action__item-img(src=require("../images/pages/actions/action_2.png") alt="action_img")
+
+              a(href="javascript:void(0);").action__item.action__item--light(style="background-color: #E05921;")
+                h3.action__item-title Розетки в&nbsp;подарок при&nbsp;покупке люстры или светильника
+                span.action__item-date До 30.07.2023
+                img.action__item-img.custom-img(src=require("../images/pages/actions/action_3.png") alt="action_img")
+
+              a(href="https://vk.com/newworldsnk" target="_blank").action__item.action__item--light(style="background-color: #0077FF;")
+                h3.action__item-title Загляните на&nbsp;наш&nbsp;канал Вконтакте
+                .action__item-btn
+                  img.action__item-link-img(src=require("../images/pages/actions/corner-left-down-arrow.svg") alt="action_img")
+                img.action__item-img(src=require("../images/pages/actions/action_vk.svg") alt="action_img")
+
+              a(href="javascript:void(0);").action__item.action__item--light(style="background-color: #000000;")
+                h3.action__item-title Новинки обоев от&nbsp;бренда Erismann
+                span.action__item-date До 30.07.2023
+                img.action__item-img.custom-img(src=require("../images/pages/actions/action_5.png") alt="action_img")
+      +footer
+
+
+
+
+
+
+
+

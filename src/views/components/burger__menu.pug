@@ -1,0 +1,38 @@
+mixin burger__menu()
+  .burger__menu
+    .burger__city
+      a.burger__city-link.js-city-link
+        img(src=require("../../images/components/header/map-pin.svg") alt="map-pin")
+        span Славянск-на-Кубани
+      button(type="button").burger__city-close
+        img(src=require("../../images/components/header/close.svg") alt="close")
+    .burger__body
+      .accordion.accordion-burger.accordion-burger-catalog
+        button.accordion__button(type="button") Каталог
+      .accordion.accordion-burger.is-open
+        button.accordion__button(type="button") Покупателям
+        .accordion__content.start
+          .accordion__body
+            .burger__links
+              a(href="javascript:void(0);").burger__link Реквизиты
+              a(href="javascript:void(0);").burger__link Наши дизайнеры и мастера
+              a(href="javascript:void(0);").burger__link Гарантия и возврат
+              a(href="javascript:void(0);").burger__link Оплата
+              a(href="javascript:void(0);").burger__link Доставка
+      .burger_other-links
+        a.burger_other-link(href="javascript:void(0);") Вакансии
+        a.burger_other-link(href="javascript:void(0);") Сотрудничество
+        a.burger_other-link(href="javascript:void(0);") Контакты
+      .burger__contacts
+        .burger__contacts-links
+          a.burger__contacts-link.burger__contacts-link--mail(href=`${mailHTML}`) #{mail}
+          a.burger__contacts-link.burger__contacts-link--tel(href=`${telHTML}`) #{tel}
+        .burger__contacts-soc
+          a(href="javascript:void(0);")
+            img(src=require("../../images/components/header/tg.svg"))
+          a(href="javascript:void(0);")
+            img(src=require("../../images/components/header/vk.svg"))
+          a(href="javascript:void(0);")
+            img(src=require("../../images/components/header/ok.svg"))
+          a(href="javascript:void(0);")
+            img(src=require("../../images/components/header/whatsapp.svg"))

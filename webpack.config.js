@@ -6,6 +6,10 @@ const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
 module.exports = (env) => ({
   entry: {
     index: path.join(__dirname, "src", "views", "index.pug"),
+    catalog: path.join(__dirname, "src", "views", "catalog.pug"),
+    product: path.join(__dirname, "src", "views", "product.pug"),
+    actions: path.join(__dirname, "src", "views", "actions.pug"),
+    search: path.join(__dirname, "src", "views", "search.pug"),
     ui: path.join(__dirname, "src", "views", "ui.pug"),
   },
   output: {

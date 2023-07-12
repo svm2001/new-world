@@ -1,0 +1,51 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.breadcrumbs {
+  padding: 24px 0 32px 0;
+  display: flex;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0;
+    border-radius: 8px;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    height: 0;
+  }
+  @include responsive.media-breakpoint-down(768)  {
+    padding: 16px 0;
+  }
+  span {
+    display: block;
+    margin: 0 12px;
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  &__item {
+    font-size: 14px;
+    line-height: 20px;
+    color: vars.$gray;
+    transition: .3s;
+    white-space: nowrap;
+    &:hover {
+      color: vars.$red;
+    }
+    &--last {
+      cursor: default;
+      &:hover {
+        color: vars.$gray;
+      }
+    }
+  }
+}

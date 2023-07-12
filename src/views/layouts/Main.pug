@@ -1,14 +1,32 @@
 block variables
+-var tel = '8 (800) 222 23 42'
+-var telHTML = 'tel:+78002222342'
+-var mail = 'info@novmir.shop'
+-var mailHTML = 'mailto:info@novmir.shop'
 
 doctype html
-html(lang='en')
+html(lang='ru')
   head
     meta(charset="UTF-8")
     link(href=require("../../styles/index.scss") rel='stylesheet')
-    link(rel="icon" type="image/x-icon" href="/ru/favicon.ico")
+    link(href=require("../../../node_modules/jquery-slinky/dist/slinky.min.css") rel='stylesheet')
+    link(href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel='stylesheet')
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css" rel='stylesheet')
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lightgallery.min.css" rel='stylesheet')
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-transitions.min.css" rel='stylesheet')
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-zoom.min.css" rel='stylesheet')
+    link(href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/css/lg-fullscreen.min.css" rel='stylesheet')
+    link(rel="icon" type="image/x-icon" href="/images/favicon.ico")
     meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
-    script(src="https://code.jquery.com/jquery-3.6.0.min.js")
-    script(src=require("../../scripts/index.js") defer)
+    script(src=require("../../scripts/index.js"))
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/lightgallery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.7.1/plugins/zoom/lg-zoom.min.js")
+    //script(src=require("../../../node_modules/jquery-slinky/dist/slinky.min.js"))
+    script(src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js")
+
     block title
       title
   body

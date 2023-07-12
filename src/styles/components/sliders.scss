@@ -1,0 +1,361 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+
+.main__slider {
+  position: relative;
+  max-height: calc(200px + (422 - 200) * ((100vw - 320px) / (568 - 320)));
+  @include responsive.media-breakpoint-up(568) {
+    max-height: calc(240px + (325 - 240) * ((100vw - 568px) / (767 - 568)));
+  }
+  @include responsive.media-breakpoint-up(768) {
+    max-height: calc(290px + (370 - 290) * ((100vw - 768px) / (1024 - 768)));
+  }
+
+  @include responsive.media-breakpoint-up(1024) {
+    max-height: calc(256px + (370 - 256) * ((100vw - 1024px) / (1600 - 1024)));
+  }
+
+  @include responsive.media-breakpoint-up(1600) {
+    max-height: 420px;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+
+
+
+  .mainSlider__img {
+    width: 100%;
+    max-height: calc(200px + (422 - 200) * ((100vw - 320px) / (568 - 320)));
+    height: calc(200px + (422 - 200) * ((100vw - 320px) / (568 - 320)));
+    object-fit: contain;
+    @include responsive.media-breakpoint-up(568) {
+      max-height: calc(240px + (325 - 240) * ((100vw - 568px) / (767 - 568)));
+      height: calc(240px + (325 - 240) * ((100vw - 568px) / (767 - 568)));
+    }
+
+    @include responsive.media-breakpoint-up(768) {
+      max-height: calc(290px + (370 - 290) * ((100vw - 768px) / (1024 - 768)));
+      height: calc(290px + (370 - 290) * ((100vw - 768px) / (1024 - 768)));
+    }
+
+    @include responsive.media-breakpoint-up(1024) {
+      max-height: calc(256px + (370 - 256) * ((100vw - 1024px) / (1600 - 1024)));
+      height: calc(256px + (370 - 256) * ((100vw - 1024px) / (1600 - 1024)));
+    }
+
+    @include responsive.media-breakpoint-up(1600) {
+      max-height: 420px;
+      height: 420px;
+    }
+  }
+}
+
+
+.slider--568 {
+  display: block;
+}
+
+.slider--768, .slider--1024, .slider--1920 {
+  display: none;
+}
+
+@include responsive.media-breakpoint-up(568) {
+  .slider--568, .slider--1024, .slider--1920 {
+    display: none;
+  }
+
+  .slider--768 {
+    display: block;
+  }
+}
+
+@include responsive.media-breakpoint-up(768) {
+  .slider--568, .slider--768, .slider--1920 {
+    display: none;
+  }
+
+  .slider--1024 {
+    display: block;
+  }
+}
+
+@include responsive.media-breakpoint-up(1024) {
+  .slider--568, .slider--768, .slider--1024 {
+    display: none;
+  }
+
+  .slider--1920 {
+    display: block;
+    &-wrapper {
+      display: flex;
+      & > a {
+        margin-right: 20px;
+      }
+
+      .mainSlider__desktop-block {
+        background: vars.$lightgray2;
+        padding: calc(10px + (24 - 10) * ((100vw - 1024px) / (1600 - 1024)));
+        @include responsive.media-breakpoint-up(1600) {
+          padding: 24px;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        border-radius: 12px;
+        flex-basis: 50%;
+      }
+
+      .mainSlider__desktop-block:nth-child(1) {
+        margin-bottom: 25px;
+      }
+
+      .mainSlider__desktop-block:nth-child(2) {
+        position: relative;
+        top: -5px;
+      }
+
+      .mainSlider__desktop-block-img {
+        max-width: 26px;
+        max-height: 26px;
+        height: 100%;
+        width: 100%;
+        img {
+          width: 100%;
+        }
+      }
+
+      .mainSlider__desktop-block-title {
+        font-size: calc(14px + (22 - 14) * ((100vw - 1024px) / (1600 - 1024)));
+        @include responsive.media-breakpoint-up(1600) {
+          font-size: 22px;
+        }
+        font-weight: 500;
+        margin-bottom: 4px;
+      }
+
+      .mainSlider__desktop-block-text {
+        color: vars.$gray;
+        font-size: calc(12px + (16 - 12) * ((100vw - 1024px) / (1600 - 1024)));
+        @include responsive.media-breakpoint-up(1600) {
+          font-size: 16px;
+        }
+        font-weight: 500;
+      }
+
+    }
+  }
+}
+
+.mainSlider__desktop-blocks {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(274px + (360 - 274) * ((100vw - 1024px) / (1200 - 1024)));
+  @include responsive.media-breakpoint-up(1200) {
+    flex-basis: calc(340px + (232 - 340) * ((100vw - 1200px) / (1399 - 1200)));
+  }
+
+  @include responsive.media-breakpoint-up(1400) {
+    flex-basis: calc(352px + (244 - 352) * ((100vw - 1400px) / (1599 - 1400)));
+  }
+
+  @include responsive.media-breakpoint-up(1600) {
+    flex-basis: 300px;
+  }
+}
+
+  @include responsive.media-breakpoint-up(1200) {
+    .swiper-scrollbar {
+      display: none;
+      height: 0;
+    }
+  }
+
+  .swiper-scrollbar {
+    background: #E3E3E3;
+    border-radius: 26px;
+    height: 3px;
+    z-index: 1;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 78px;
+    @include responsive.media-breakpoint-up(768) {
+      bottom: -20px;
+    }
+    @include responsive.media-breakpoint-up(1200) {
+      display: none;
+      height: 0;
+    }
+  }
+    .swiper-scrollbar-drag {
+    background: vars.$red;
+  }
+
+
+.best__price-slider, .new-world-vk__slider, .main-shops__slider,
+//.main-raitings__slider
+{
+  @include responsive.media-breakpoint-up(1200) {
+    .swiper-arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      z-index: 5;
+
+      .arrow-left, .arrow-right {
+        width: 25px;
+        height: 25px;
+        z-index: 6;
+        background-color: vars.$white;
+        border: 1px solid vars.$lightgray;
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        position: relative;
+        cursor: pointer;
+        transition: .3s;
+      }
+
+      .arrow-left {
+        border-radius: 0 4px 4px 0;
+        &:hover {
+          background-color: vars.$lightgray;
+        }
+      }
+
+      .arrow-right {
+        border-radius: 4px 0 0 4px;
+        left: -1px;
+        &:hover {
+          background-color: vars.$lightgray;
+        }
+      }
+
+      .arrow-left:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url("/src/images/components/header/arr.svg");
+        width: 15px;
+        height: 15px;
+        &:hover {
+          transform: rotate(90deg) translate(-50%, -50%) scale(1.1);
+        }
+      }
+
+      .arrow-left.swiper-button-disabled,
+      .arrow-right.swiper-button-disabled {
+        transform: scale(0);
+      }
+
+      .arrow-right:before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(270deg);
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-image: url("/src/images/components/header/arr.svg");
+        width: 15px;
+        height: 15px;
+        &:hover {
+          transform: rotate(270deg) translate(-50%, -50%) scale(1.1);
+        }
+      }
+    }
+  }
+}
+
+.card__img-slider {
+  @include responsive.media-breakpoint-up(1200) {
+    display: none;
+    .swiper-arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      display: flex;
+      justify-content: space-between;
+      .arrow-left, .arrow-right {
+        width: 20px;
+        height: 20px;
+        background: vars.$red;
+      }
+    }
+  }
+  .swiper-pagination {
+    bottom: 15px;
+  }
+}
+
+.swiper-initialized {
+  overflow-x: hidden;
+  overflow-y: hidden;
+  @include responsive.media-breakpoint-up(1200) {
+    position: relative;
+  }
+}
+
+.bestPrice .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  z-index: 50;
+  height: 5px;
+  width: 90%;
+}
+
+@include responsive.media-breakpoint-up(768) {
+  .bestPrice .best__price-slider {
+    overflow: visible;
+
+    .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+      position: absolute;
+      left: 50%;
+      bottom: -29px;
+      z-index: 50;
+      height: 2px;
+      width: 93%;
+    }
+  }
+}
+
+@include responsive.media-breakpoint-up(1200) {
+  .bestPrice .best__price-slider {
+    overflow: hidden;
+  }
+}
+
+
+html .main__slider .swiper-pagination {
+  z-index: 1;
+  bottom: 23px;
+  .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: vars.$white;
+  }
+
+  .swiper-pagination-bullet {
+    background: rgba(255,255,255,.5)
+  }
+}
+
+@include responsive.media-breakpoint-up(1600) {
+  .slider--1920-wrapper .mainSlider__desktop-block-img {
+    max-height: 60px;
+    max-width: 60px;
+  }
+}

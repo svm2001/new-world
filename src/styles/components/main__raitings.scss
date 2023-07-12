@@ -1,0 +1,213 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.main-raitings {
+  .swiper-slide {
+    min-height: 349px;
+    max-height: 349px;
+    .main-raitings__wrapper {
+      min-height: 349px;
+      max-height: 349px;
+    }
+  }
+  &__wrapper {
+    background: vars.$lightgray2;
+    padding: 20px;
+    border-radius: 12px;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 17px;
+  }
+
+  &__content {
+    display: flex;
+    margin-bottom: 20px;
+  }
+
+  &__total {
+    font-weight: 700;
+    font-size: 32px;
+    margin-right: 12px;
+    @include responsive.media-breakpoint-up(568) {
+      font-size: 24px;
+      margin-right: 12px;
+    }
+    @include responsive.media-breakpoint-up(768) {
+      margin-right: 8px;
+    }
+  }
+
+  &__raiting {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__raiting-wrapper {
+    display: flex;
+  }
+
+  &__img {
+    max-width: 150px;
+    min-height: 28px;
+    max-height: 28px;
+  }
+
+  &__star {
+    margin-right: 3px;
+    @include responsive.media-breakpoint-up(568) {
+      margin-right: 2px;
+    }
+    svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+
+  &__raiting {
+    margin-right: 12px;
+    @include responsive.media-breakpoint-up(568) {
+      margin-right: 16px;
+    }
+    @include responsive.media-breakpoint-up(768) {
+      margin-right: 10px;
+    }
+  }
+
+  &__raiting-count {
+    color: vars.$gray;
+    font-size: 16px;
+    @include responsive.media-breakpoint-up(568) {
+      font-size: 14px;
+      white-space: nowrap;
+    }
+  }
+
+  &__commend-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__commend-percent {
+    background: vars.$red;
+    color: vars.$white;
+    font-size: 11px;
+    border-radius: 4px;
+    padding: 2px 4px;
+    text-align: center;
+    margin-left: 25px;
+    margin-bottom: 4px;
+    position: relative;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 20px;
+      height: 20px;
+      top: -2px;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      background-image: url("/src/images/pages/main/raitings/commend.svg");
+      left: -24px;
+    }
+  }
+
+  &__commend-count {
+    color: vars.$gray;
+    font-size: 13px;
+    @include responsive.media-breakpoint-up(568) {
+      font-size: 13px;
+      white-space: nowrap;
+    }
+  }
+
+  .btn--reverse {
+    @include responsive.media-breakpoint-up(568) {
+      padding: 7px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__human {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 17px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid vars.$lightgray;
+    min-height: 66px;
+    p {
+      flex-basis: 50%;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    &-stars {
+      .main-raitings__raiting-wrapper {
+        justify-content: flex-end;
+      }
+      p {
+        font-size: 13px;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__content-text p {
+    min-height: 136px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    max-height: 136px;
+  }
+
+  &__content-text p + a {
+    color: vars.$red;
+    position: absolute;
+    bottom: 23px;
+    display: inline;
+    &:hover {
+      color: vars.$gray;
+    }
+    &:hover:before {
+      right: -25px;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      right: -20px;
+      top: 6px;
+      transform: rotate(270deg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+      background-image: url("/src/images/components/header/arr.svg");
+      width: 13px;
+      height: 13px;
+      transition: .3s;
+    }
+  }
+
+  .btn--reverse {
+    position: absolute;
+    width: calc(100% - 45px);
+    bottom: 24px;
+  }
+
+  &__text p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    max-height: 88px;
+    min-height: 88px;
+    overflow: hidden;
+  }
+
+  .swiper-pagination {
+    bottom: -25px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: vars.$red;
+  }
+}

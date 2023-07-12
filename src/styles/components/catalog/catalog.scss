@@ -1,0 +1,363 @@
+@use '../../mixins/responsive';
+@use "../../vars";
+
+.catalog {
+  h1 {
+    margin-bottom: 38px;
+    @include responsive.media-breakpoint-down(1024)  {
+      font-size: 32px;
+    }
+
+    @include responsive.media-breakpoint-down(768)  {
+      font-size: 28px;
+      margin-bottom: 25px;
+    }
+
+    span {
+      font-size: 14px;
+      color: vars.$gray;
+      margin-left: 8px;
+      font-weight: 400;
+    }
+  }
+
+  &__filters-wrapper {
+    position: relative;
+  }
+
+  &__body {
+    display: flex;
+    margin-bottom: 84px;
+  }
+
+  &__sort-wrapper {
+    margin-bottom: 20px;
+  }
+
+  &__card-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__card {
+    flex-basis: 25%;
+    width: 25%;
+    margin-bottom: 80px;
+    position: relative;
+    border: none;
+    padding: 18px;
+    @include responsive.media-breakpoint-down(1600)  {
+      padding: 8px;
+    }
+    @include responsive.media-breakpoint-down(1200) {
+      flex-basis: 33.33%;
+      width: 33.33%;
+      max-width: 400px;
+    }
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: vars.$lightgray;
+      bottom: -40px;
+      left: 0;
+    }
+
+    .product-card_dots, .card__favourite {
+      opacity: 0;
+      transition: .3s;
+      @include responsive.media-breakpoint-down(1200) {
+        opacity: 1;
+      }
+    }
+
+    &:hover {
+      .product-card_dots, .card__favourite {
+        opacity: 1;
+      }
+    }
+
+    .card__favourite.active {
+      opacity: 1;
+    }
+  }
+
+  .card__label {
+    top: 18px;
+    left: 18px;
+    @include responsive.media-breakpoint-down(1600) {
+      top: 8px;
+      left: 8px;
+    }
+  }
+
+  &__filters-inner-container {
+    display: flex;
+    flex-direction: column;
+    max-height: 196px;
+    overflow: hidden;
+    transition: .3s;
+    &.full {
+      max-height: 260px;
+      overflow-y: auto;
+    }
+    a {
+      display: block;
+      transition: .3s;
+      font-size: 16px;
+      padding-bottom: 12px;
+      &:hover {
+        color: vars.$red;
+      }
+      //&:not(:nth-last-child(1)) {
+      //  padding-bottom: 12px;
+      //}
+    }
+  }
+
+  &__filters-links-show-all {
+    color: vars.$red;
+    margin-top: 20px;
+    font-size: 16px;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__filters-top {
+    display: none;
+  }
+
+  .card__img-slider img {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .product-card_dots {
+    margin: 1px 0;
+    top: -23px;
+    position: relative;
+  }
+
+  .product-card_img {
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .card__favourite {
+    top: 16px;
+    right: 16px;
+  }
+
+  @include responsive.media-breakpoint-down(1200) {
+    .card__img-slider .swiper-pagination {
+      bottom: 25px;
+    }
+
+    .card__img-slider {
+      max-height: 176px;
+      min-height: 176px;
+    }
+  }
+
+  @include responsive.media-breakpoint-down(1024) {
+
+    .card__img-slider img {
+      max-height: 220px;
+      min-height: 220px;
+    }
+
+    .card__img-slider {
+      max-height: 230px;
+      min-height: 230px;
+    }
+
+
+    &__body {
+      margin-bottom: 73px;
+    }
+
+    &__card-list {
+      justify-content: space-between;
+      display: flex;
+    }
+    &__card {
+      width: 31.8%;
+      flex-basis: 31.8%;
+      margin-bottom: 12px;
+      &:before, &:after {
+        display:none;
+      }
+    }
+    &__bot {
+      margin-top: 14px;
+      .btn--white {
+        padding: 8px 29px;
+      }
+    }
+    &__filters-top {
+      display: flex;
+      position: fixed;
+      max-width: 50%;
+      width: 100%;
+      z-index: 20;
+      min-height: 56px;
+      max-height: 56px;
+      background: vars.$lightgray2;
+      top: 0;
+      left: -100%;
+      padding: 16px;
+      justify-content: space-between;
+      transition: .5s;
+      &::-webkit-scrollbar {
+        width: 0;
+        border-radius: 8px/* ширина всей полосы прокрутки */
+      }
+      a {
+        font-size: 16px;
+        color: vars.$red;
+        text-align: left;
+        flex-basis: 33.33%;
+        line-height: 32px;
+      }
+
+      span {
+        font-size: 20px;
+        text-align: center;
+        flex-basis: 33.33%;
+      }
+
+      button {
+        width: 18px;
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: 23px;
+        background-image: url("/src/images/components/header/close.svg");
+        text-align: left;
+        flex-basis: 33.33%;
+      }
+      &.active {
+        left: 0;
+      }
+    }
+
+    .ac-trigger:after {
+      right: 3px!important;
+    }
+
+    &__filters-wrapper {
+      padding-top: 56px;
+    }
+  }
+
+  @include responsive.media-breakpoint-down(768) {
+    &__bot {
+      flex-direction: column-reverse;
+      .btn--white {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+
+    }
+  }
+
+  @include responsive.media-breakpoint-down(680) {
+    &__card {
+      width: 49%;
+      flex-basis: 49%;
+      margin-bottom: 10px;
+    }
+  }
+
+  @include responsive.media-breakpoint-down(576) {
+    &__filters-top {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  @include responsive.media-breakpoint-down(433) {
+    .card__img-slider img {
+      min-height: 166px;
+      max-height: 166px;
+    }
+
+    .card__img-slider {
+      min-height: 176px;
+      max-height: 176px;
+      max-width: 180px;
+      min-width: 10px;
+    }
+
+    .card__img-slider .swiper-pagination {
+      bottom: 19px;
+    }
+  }
+
+  @include responsive.media-breakpoint-down(355) {
+    .card__img-slider img {
+      min-height: 135px;
+      max-height: 135px;
+    }
+
+    .card__img-slider {
+      min-height: 145px;
+      max-height: 145px;
+    }
+
+    .card__label--new {
+      padding: 3px 5px;
+      text-align: center;
+      font-size: 8px;
+    }
+
+    .card__label--discount {
+      padding: 5px 5px;
+      font-size: 8px;
+      text-align: center;
+    }
+
+    .card__favourite {
+      width: 20px;
+      height: 20px;
+      top: 11px;
+      right: 11px;
+
+      svg {
+        width: 13px;
+        height: 13px;
+      }
+    }
+
+    .card__title {
+      font-size: 12px;
+      line-height: 19px;
+    }
+
+    .card__price--current {
+      font-size: 11px;
+      font-weight: 900;
+    }
+
+    .card__price--old {
+      font-size: 9px;
+    }
+
+    .card__availability--yes, .card__availability--no {
+      font-size: 10px;
+    }
+
+    h1 {
+      font-size: 20px;
+      margin-bottom: 18px;
+    }
+  }
+
+}

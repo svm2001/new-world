@@ -1,0 +1,111 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.ac{
+  margin-top: 0;
+  margin-bottom: 10px;
+  border: none;
+  &-header {
+    width: 100%;
+  }
+  &-trigger {
+    font-size: 16px!important;
+    font-weight: 700!important;
+    padding: 16px 32px 16px 0!important;
+    transition: .3s;
+    &:hover {
+      color: vars.$red;
+    }
+    &:after {
+      content: ''!important;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 15px;
+      background-image: url("/src/images/components/header/arr-gray.svg");
+      width: 20px;
+      height: 20px;
+      transition: .4s;
+      right: 0!important;
+    }
+  }
+  &-panel {
+    position: relative;
+  }
+  &.is-active {
+    .ac-trigger:after {
+      transform: translate(0,-50%) rotate(180deg) ;
+    }
+  }
+}
+
+.accordion {
+  display: block;
+  border-bottom: 1px solid #e3e3e3
+}
+
+.accordion.is-open .accordion__button:before {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+
+.accordion.is-open .accordion__button.open:before {
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg)
+}
+
+.accordion__button {
+  position: relative;
+  font-size: 18px;
+  width: 100%;
+  text-align: left
+}
+
+.accordion__button:before {
+  position: absolute;
+  content: "";
+  background-image: url("/src/images/components/header/arr.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 16px;
+  height: 8px;
+  -webkit-transition: .3s;
+  transition: .3s
+}
+
+.accordion__button.open:before {
+  -webkit-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%)
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .2s ease-in-out;
+  transition: max-height .2s ease-in-out
+}
+
+.accordion__content.start {
+  max-height: 100%
+}
+
+.accordion-burger .accordion__button {
+  padding: 20px 0;
+  font-weight: 500
+}
+
+.accordion-burger .accordion__body {
+  margin-bottom: 20px
+}
+
+.accordion-burger-catalog .accordion__button:before {
+  -webkit-transform: translateY(-50%) rotate(270deg);
+  transform: translateY(-50%) rotate(270deg)
+}
+
+
+

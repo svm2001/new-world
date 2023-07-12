@@ -1,0 +1,24 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
+  @include responsive.media-breakpoint-up(768) {
+    padding: 0 20px;
+  }
+  @include responsive.media-breakpoint-up(1200) {
+    max-width: 1180px;
+  }
+
+  @include responsive.media-breakpoint-up(1400) {
+    max-width: 1300px;
+  }
+
+  @include responsive.media-breakpoint-up(1600) {
+    max-width: 1460px;
+    padding: 0;
+  }
+}
