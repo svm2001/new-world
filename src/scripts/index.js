@@ -14,6 +14,7 @@ import { catalogCheckboxes } from "./components/catalogCheckboxes";
 import { accordionCustom } from "./components/accordionCustom";
 import { product } from "./components/product";
 import Accordion from 'accordion-js';
+import counter from './components/card/counter'
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -29,6 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
   catalogCheckboxes();
   accordionCustom();
   product();
+  counter();
 
   tabs({
     tabParentSelector: '.b-header-desk-catalog',

@@ -1,0 +1,125 @@
+extends layouts/Main
+include components/header
+include components/footer
+include components/burger__menu
+include components/breadcrumbs
+
+include components/city__search
+include components/bot__menu
+include components/burger__catalog
+include components/search__goods
+include components/scrollToTop
+include components/pagination
+include components/filter__result-float
+
+block title
+    title Корзина
+block content
+    +bot__menu
+    +burger__catalog
+    +city__search
+    +search__goods
+    +scrollToTop
+
+    .wrapper.basket
+        +header
+        main
+            .container
+                +breadcrumbs
+
+                .basket__content
+                    .basket__block-title
+                        h1.basket__title Корзина<span>2</span>
+                        button.basket__empty-basket(type="button" aria-label="Очистить корзину")
+                            span Очистить корзину
+                            svg(width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg")
+                                g(id="x")
+                                    path(id="Vector" d="M18 6L6 18" stroke="#636B71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    path(id="Vector_2" d="M6 6L18 18" stroke="#636B71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                    .basket__inner
+                        .basket__wrap-cards 
+                            ul.basket__list-features
+                                li Товар
+                                li Цена
+                                li Кол-во
+                                li Сумма
+                            .basket__inner-cards
+                                .second-card
+                                    a.second-card__block-product(href="#")
+                                        img.second-card__image(src=require("../images/pages/main/card/5.jpg") alt="prod")
+                                        .second-card__block-info 
+                                            span.second-card__art Артикул · 718811
+                                            span.second-card__name Люстра FREYA FR4005PL-06B2
+                                    .second-card__block-price.second-card__block-price--price
+                                        span.second-card__old-price 12 990 ₽
+                                        span.second-card__price 4 601 ₽ шт
+                                    .counter(data-counter="counter")
+                                        button.counter__btn(type="button" data-counter="remove")
+                                            svg.counter__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                                                path(d="M5 12H19" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                        input.counter__input(type="number" value="1" min="1" max="500" step="1" data-step="1" data-counter="input")
+                                        button.counter__btn(type="button" data-counter="add")
+                                            svg.counter__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                                                path(d="M12 5V19" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                                path(d="M5 12H19" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    .second-card__block-price.second-card__block-price--amount
+                                        span.second-card__old-price 12 990 ₽
+                                        span.second-card__price 4 600 ₽
+                                        span.second-card__per-piece 1 600 ₽ шт
+                                        //- span.second-card__per-piece показывается в мобильной версии (цена за штуку)
+                                    button.second-card__btn-del(type="button" aria-label="Удалить карточку товара")
+                                        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                                            path(d="M18 6L6 18" stroke="#636B71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                            path(d="M6 6L18 18" stroke="#636B71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+
+                                .second-card
+                                    a.second-card__block-product(href="#")
+                                        img.second-card__image(src=require("../images/pages/main/card/6.jpg") alt="prod")
+                                        .second-card__block-info 
+                                            span.second-card__art Артикул · 718811
+                                            span.second-card__name Свет. люстра подвес LEEK LED GAMMA 118W и еще допол. текст
+                                    .second-card__block-price.second-card__block-price--price
+                                        span.second-card__old-price 1 990 ₽
+                                        span.second-card__price 1 600 ₽ шт
+                                    .counter(data-counter="counter")
+                                        button.counter__btn(type="button" data-counter="remove")
+                                            svg.counter__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                                                path(d="M5 12H19" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                        input.counter__input(type="number" value="1" min="1" max="500" step="1" data-step="1" data-counter="input")
+                                        button.counter__btn(type="button" data-counter="add")
+                                            svg.counter__icon(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                                                path(d="M12 5V19" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                                path(d="M5 12H19" stroke="#1C1F33" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                    .second-card__block-price.second-card__block-price--amount
+                                        span.second-card__old-price 1 990 ₽
+                                        span.second-card__price 1 600 ₽
+                                        span.second-card__per-piece 1 600 ₽ шт
+                                        //- span.second-card__per-piece показывается в мобильной версии (цена за штуку)
+                                    button.second-card__btn-del(type="button" aria-label="Удалить карточку товара")
+                                        svg(xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none")
+                                            path(d="M18 6L6 18" stroke="#636B71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                                            path(d="M6 6L18 18" stroke="#636B71" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round")
+                        .order-details
+                            .order-details__info 
+                                span.order-details__title Детали заказа
+                                ul.order-details__list 
+                                    li 
+                                        span Стоимость товара
+                                        span 6 431 ₽
+                                    li 
+                                        span Скидка
+                                        span -877 ₽
+                                .order-details__wrap-price 
+                                    span.order-details__title Итого
+                                    .order-details__inner-price
+                                        span.order-details__old-price 12 990 ₽
+                                        span.order-details__price 6 431 ₽
+                            a(class="btn" href="#")
+                                span Оформить заказ
+
+
+
+
+
+
+        +footer

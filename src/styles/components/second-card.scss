@@ -1,0 +1,97 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.second-card {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(100px, 437px) 120px repeat(2, 127px);
+    grid-column-gap: 15px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid vars.$lightgray;
+    border-radius: 12px;
+    padding: 20px 68px 20px 20px;
+
+    &__block-product {
+        display: grid;
+        grid-template-columns: max-content minmax(100px, 313px);
+        align-items: center;
+        grid-column-gap: 24px;
+
+        &:hover .second-card__name {
+            color: vars.$red;
+        }
+    }
+
+    &__image {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    &__block-info {
+        display: grid;
+        align-items: center;
+        grid-row-gap: 4px;
+        justify-content: start;
+    }
+
+    &__art {
+        color: vars.$gray;
+        font-size: 12px;
+    }
+
+    &__name {
+        color: vars.$dark;
+        font-size: 16px;
+        line-height: 1.5em;
+        transition: color 0.3s;
+    }
+
+    &__block-price {
+        display: grid;
+        grid-row-gap: 4px;
+    }
+
+    &__old-price {
+        font-size: 12px;
+        color: vars.$gray;
+        text-decoration: line-through;
+    }
+
+    &__price {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        color: vars.$dark;
+    }
+
+    &__per-piece {
+        display: none;
+        font-size: 12px;
+        color: vars.$gray;
+    }
+
+    &__btn-del {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        width: 24px;
+        height: 24px;
+
+        &:hover svg path {
+            stroke: vars.$red;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+
+            path {
+                transition: stroke 0.3s;
+            }
+        }
+    }
+}
