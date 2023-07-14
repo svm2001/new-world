@@ -1,0 +1,72 @@
+extends layouts/Main
+include components/header
+include components/footer
+include components/burger__menu
+include components/breadcrumbs
+
+include components/city__search
+include components/bot__menu
+include components/burger__catalog
+include components/search__goods
+include components/scrollToTop
+include components/pagination
+include components/filter__result-float
+
+block title
+    title Корзина
+block content
+    +bot__menu
+    +burger__catalog
+    +city__search
+    +search__goods
+    +scrollToTop
+
+    .wrapper.making-order
+        +header
+        main
+            .container
+                +breadcrumbs
+
+                .making-order__content
+                    h1.making-order__title Оформление заказа
+                    .making-order__inner
+                        .making-order__wrap-stages
+                            .order-stage
+                        .making-order__wrap-aside-info
+                            .order-details
+                                .order-details__info 
+                                    span.order-details__title Ваш заказ
+                                    ul.order-details__list 
+                                        li 
+                                            span Товары · 2
+                                            span 6 431 ₽
+                                .order-details__wrap-price 
+                                    span.order-details__title Итого
+                                    .order-details__inner-price
+                                        span.order-details__old-price 12 990 ₽
+                                        span.order-details__price 6 431 ₽
+                                a(class="btn" href="#")
+                                    span Оформить заказ
+                            .privacy-policy
+                                span Нажимая на кнопку «Оформить заказ», вы соглашаетесь на <a href="#"> обработку персональных данных</a>
+                            .making-order__wrap-info-blocks 
+                                .info-block
+                                    img(src=require("../icons/help-circle.svg") class="info-block__icon" alt="question")
+                                    .info-block__info
+                                        span.info-block__title Отвечаем без перерыва и выходных
+                                        span.info-block__subtitle <a href="tel:88002222342">8 (800) 222-23-42</a> (c 09:00 до 18:00)
+                                .info-block
+                                    img(src=require("../icons/refresh-ccw.svg") class="info-block__icon" alt="question")
+                                    .info-block__info
+                                        span.info-block__title Возврат товара надлежащего качества
+                                .info-block
+                                    img(src=require("../icons/green-check-mark.svg") class="info-block__icon" alt="question")
+                                    .info-block__info
+                                        span.info-block__title Безопасная оплата
+                                        span.info-block__subtitle оплата через процессинг ОАО «СберБанк России»
+                                .info-block
+                                    img(src=require("../icons/package-search.svg") class="info-block__icon" alt="question")
+                                    .info-block__info
+                                        span.info-block__title Гарантия доставки
+                                        span.info-block__subtitle работаем с службой курьерской доставки СДЭК                     
+        +footer

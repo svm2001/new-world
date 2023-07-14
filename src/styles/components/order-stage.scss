@@ -1,0 +1,8 @@
+@use "../vars";
+
+.order-stage {
+    padding: 20px;
+    border: 1px solid vars.$lightgray;
+    border-radius: 12px;
+    background-color: vars.$white;
+}
