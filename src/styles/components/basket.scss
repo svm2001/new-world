@@ -33,13 +33,20 @@
         grid-column-gap: 8px;
         justify-content: end;
 
-        &:hover svg path {
-            stroke: vars.$redActive;
+        &:hover {
+            svg path {
+                stroke: vars.$redActive;
+            }
+
+            span {
+                color: vars.$redActive;
+            }
         }
 
         span {
             color: vars.$gray;
             letter-spacing: -0.24px;
+            transition: color 0.3s;
         }
 
         svg {
