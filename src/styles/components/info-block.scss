@@ -8,6 +8,10 @@
     border: 1px solid vars.$lightgray;
     border-radius: 8px;
 
+    &[href]:hover &__title {
+        color: vars.$red;
+    }
+
     &__icon {
         width: 24px;
         height: 24px;
@@ -22,6 +26,7 @@
         line-height: 1.5em;
         letter-spacing: -0.24px;
         color: vars.$dark;
+        transition: color 0.3s;
     }
 
     &__subtitle {

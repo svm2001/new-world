@@ -13,7 +13,7 @@ include components/pagination
 include components/filter__result-float
 
 block title
-    title Корзина
+    title Оформление заказа
 block content
     +bot__menu
     +burger__catalog
@@ -29,9 +29,152 @@ block content
 
                 .making-order__content
                     h1.making-order__title Оформление заказа
-                    .making-order__inner
+                    form.making-order__inner(action="" novalidate data-validate)
                         .making-order__wrap-stages
-                            .order-stage
+                            .order-stage.order-stage--method-obtaining(data-order-stage="main")
+                                .order-stage__block-head
+                                    h2.order-stage__title Способ получения в <button type="button" data-order-stage="btn-city" aria-label="выбранный город">г. Славянск-на-Кубани</button>
+                                    button.order-stage__btn-change(type="button" data-order-stage="btn-change") Изменить
+                                .order-stage__block-body 
+                                    .order-stage__section-options
+                                        .order-stage__option
+                                            label.order-stage__option-label(data-role="")
+                                                input.order-stage__option-input(type="radio" name="1" value="" checked)
+                                                span.order-stage__option-content
+                                                    img.order-stage__option-icon(src=require("../icons/store-bench.svg") alt="icon")
+                                                    .order-stage__option-info 
+                                                        span.order-stage__option-title Самовывоз из магазина
+                                                        span.order-stage__option-subtitle Сегодня, Бесплатно
+                                        .order-stage__option
+                                            label.order-stage__option-label(data-role="")
+                                                input.order-stage__option-input(type="radio" name="1" value="")
+                                                span.order-stage__option-content
+                                                    img.order-stage__option-icon(src=require("../icons/truck.svg") alt="icon")
+                                                    .order-stage__option-info 
+                                                        span.order-stage__option-title Доставка
+                                                        span.order-stage__option-subtitle Курьером до двери, бесплатно при заказе от 3000 руб.
+                                    .order-stage__section-info-map
+                                        .order-stage__wrap-info
+                                            h2.order-stage__title Магазин «Новый мир»
+                                            .order-stage__block-info
+                                                img.order-stage__info-icon(src=require("../icons/map-pin-1.svg") alt="icon")
+                                                span.order-stage__info-text Краснодарский край, г. Славянск-на-Кубани, ул. Крупской, 280, Славянск-на-Кубани
+                                            .order-stage__block-info
+                                                img.order-stage__info-icon(src=require("../icons/clock-1.svg") alt="icon")
+                                                span.order-stage__info-text Ежедневно, 08:00–19:00
+                                            button.order-stage__info-btn(type="button") Открыть на карте
+                                        .order-stage__mini-map(data-order-stage="mini-map")
+                                    .order-stage__section-form
+                                        .order-stage__form
+                                            .order-stage__wrap-data 
+                                                h2.order-stage__title Адрес для выезда курьера <span>от 3 до 5 дней , от 0 ₽<span>
+                                                .order-stage__data-inputs 
+                                                    .input
+                                                        input.input__field(type="text" name="name" placeholder="Имя" required)
+                                                        span.input__message
+                                                    .order-stage__data-group-inputs 
+                                                        .input
+                                                            input.input__field(type="text" name="entrance" placeholder="Подъезд" required)
+                                                            span.input__message
+                                                        .input
+                                                            input.input__field(type="text" name="floor" placeholder="Этаж" required)
+                                                            span.input__message
+                                                        .input
+                                                            input.input__field(type="text" name="flat" placeholder="Квартира" required)
+                                                            span.input__message
+                                                        .input
+                                                            input.input__field(type="text" name="index" placeholder="Индекс" required)
+                                                            span.input__message
+                                    .order-stage__section-map
+                                        .order-stage__map(data-order-stage="map")
+                                .order-stage__block-selected-data
+                                    .order-stage__block-data
+                                        img.order-stage__data-icon(src=require("../icons/map-pin-1.svg") alt="icon")
+                                        span.order-stage__data-text Доставка курьером <span>Краснодарский край, г. Славянск-на-Кубани, ул. Крупской, 280, Славянск-на-Кубани</span>
+                                    .order-stage__block-data
+                                        img.order-stage__data-icon(src=require("../icons/clock-1.svg") alt="icon")
+                                        span.order-stage__data-text 30 июня, пт 09:00-14:00
+                                .order-stage__block-footer 
+                                    button.btn(type="button" data-order-stage="btn-next" aria-label="Далее")
+                                        span Далее
+                            .order-stage(data-order-stage="main")
+                                .order-stage__block-head
+                                    h2.order-stage__title Способ оплаты
+                                    button.order-stage__btn-change(type="button" data-order-stage="btn-change") Изменить
+                                .order-stage__block-body 
+                                    .order-stage__section-options
+                                        .order-stage__option
+                                            label.order-stage__option-label(data-role="")
+                                                input.order-stage__option-input(type="radio" name="2" value="" checked)
+                                                span.order-stage__option-content
+                                                    img.order-stage__option-icon(src=require("../icons/credit-card.svg") alt="icon")
+                                                    .order-stage__option-info 
+                                                        span.order-stage__option-title Банковская карта
+                                        .order-stage__option
+                                            label.order-stage__option-label(data-role="")
+                                                input.order-stage__option-input(type="radio" name="2" value="")
+                                                span.order-stage__option-content
+                                                    img.order-stage__option-icon(src=require("../icons/file-text.svg") alt="icon")
+                                                    .order-stage__option-info 
+                                                        span.order-stage__option-title Банковский счет
+                                                        span.order-stage__option-subtitle Оплата через р/с для юр. лиц
+                                .order-stage__block-selected-data
+                                    .order-stage__block-data
+                                        img.order-stage__data-icon(src=require("../icons/credit-card.svg") alt="icon")
+                                        span.order-stage__data-text Банковский счет <span>Оплата через р/с для юр. лиц</span>
+                                .order-stage__block-footer 
+                                    button.btn(type="button" data-order-stage="btn-next" aria-label="Далее")
+                                        span Далее
+                            .order-stage(data-order-stage="main")
+                                .order-stage__block-head
+                                    h2.order-stage__title Получатель
+                                    button.order-stage__btn-change(type="button" data-order-stage="btn-change") Изменить
+                                .order-stage__block-body 
+                                    .order-stage__section-form 
+                                        .order-stage__form
+                                            .order-stage__wrap-data 
+                                                span.order-stage__data-title Личные данные
+                                                .order-stage__data-inputs 
+                                                    .input
+                                                        input.input__field(type="text" name="fio" placeholder="ФИО" required)
+                                                        span.input__message
+                                                    .input
+                                                        input.input__field(type="text" name="email" placeholder="E-mail" required)
+                                                        span.input__message
+                                                    .input
+                                                        input.input__field(type="text" name="phone" placeholder="Телефон" data-phone-mask required)
+                                                        span.input__message
+                                            .order-stage__wrap-data 
+                                                span.order-stage__data-title Данные о компании
+                                                .order-stage__data-inputs 
+                                                    .input
+                                                        input.input__field(type="text" name="nameCompany" placeholder="Название компании")
+                                                        span.input__message
+                                                    .order-stage__data-group-inputs 
+                                                        .input
+                                                            input.input__field(type="text" name="kpp" placeholder="КПП" data-kpp-mask required)
+                                                            span.input__message
+                                                        .input
+                                                            input.input__field(type="text" name="paymentAccount" placeholder="Расчетный счет" data-payment-account-mask required)
+                                                            span.input__message
+                                                        .input
+                                                            input.input__field(type="text" name="inn" placeholder="ИНН" data-inn-mask required)
+                                                            span.input__message
+                                                        .input
+                                                            input.input__field(type="text" name="bicBank" placeholder="БИК банка" data-bic-mask required)
+                                                            span.input__message
+                                                    .input
+                                                        input.input__field(type="text" name="legalAddress" placeholder="Юридический адрес" required)
+                                                        span.input__message
+                                                    .input
+                                                        input.input__field(type="text" name="actualAddress" placeholder="Фактический адрес" required)
+                                                        span.input__message
+                                            .order-stage__wrap-data 
+                                                span.order-stage__data-title Дополнительная информация
+                                                .order-stage__data-inputs 
+                                                    .textarea
+                                                        textarea.textarea__field(name="comment" placeholder="Комментарий к заказу")
+                                                        span.textarea__message
                         .making-order__wrap-aside-info
                             .order-details
                                 .order-details__info 
@@ -45,28 +188,29 @@ block content
                                     .order-details__inner-price
                                         span.order-details__old-price 12 990 ₽
                                         span.order-details__price 6 431 ₽
-                                a(class="btn" href="#")
+                                button(class="btn" type="submit")
                                     span Оформить заказ
                             .privacy-policy
                                 span Нажимая на кнопку «Оформить заказ», вы соглашаетесь на <a href="#"> обработку персональных данных</a>
                             .making-order__wrap-info-blocks 
-                                .info-block
-                                    img(src=require("../icons/help-circle.svg") class="info-block__icon" alt="question")
+                                a.info-block(href="#")
+                                    img(src=require("../icons/help-circle.svg") class="info-block__icon" alt="icon")
                                     .info-block__info
                                         span.info-block__title Отвечаем без перерыва и выходных
-                                        span.info-block__subtitle <a href="tel:88002222342">8 (800) 222-23-42</a> (c 09:00 до 18:00)
-                                .info-block
-                                    img(src=require("../icons/refresh-ccw.svg") class="info-block__icon" alt="question")
+                                        span.info-block__subtitle 8 (800) 222-23-42 (c 09:00 до 18:00)
+                                a.info-block(href="#")
+                                    img(src=require("../icons/refresh-ccw.svg") class="info-block__icon" alt="icon")
                                     .info-block__info
                                         span.info-block__title Возврат товара надлежащего качества
-                                .info-block
-                                    img(src=require("../icons/green-check-mark.svg") class="info-block__icon" alt="question")
+                                a.info-block(href="#")
+                                    img(src=require("../icons/green-check-mark.svg") class="info-block__icon" alt="icon")
                                     .info-block__info
                                         span.info-block__title Безопасная оплата
                                         span.info-block__subtitle оплата через процессинг ОАО «СберБанк России»
-                                .info-block
-                                    img(src=require("../icons/package-search.svg") class="info-block__icon" alt="question")
+                                a.info-block(href="#")
+                                    img(src=require("../icons/package-search.svg") class="info-block__icon" alt="icon")
                                     .info-block__info
                                         span.info-block__title Гарантия доставки
                                         span.info-block__subtitle работаем с службой курьерской доставки СДЭК                     
         +footer
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;loadByRequire=1"></script>

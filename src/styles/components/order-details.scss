@@ -2,6 +2,7 @@
 @use "../vars";
 
 .order-details {
+    position: relative;
     display: grid;
     grid-row-gap: 20px;
     align-items: start;

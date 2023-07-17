@@ -1,5 +1,6 @@
 import * as noUiSlider from 'nouislider';
 import wNumb from 'wnumb'
+import IMask from 'imask'
 import { slider } from "./components/slider";
 import { header } from "./components/header";
 import { cityChoose } from "./components/cityChoose";
@@ -14,8 +15,10 @@ import { catalogCheckboxes } from "./components/catalogCheckboxes";
 import { accordionCustom } from "./components/accordionCustom";
 import { product } from "./components/product";
 import Accordion from 'accordion-js';
-import counter from './components/card/counter'
-
+import counter from './components/card/counter';
+import validate from './validate';
+import masks from './masks'
+import orderStage from './components/orderStage'
 
 document.addEventListener('DOMContentLoaded', () => {
   slider();
@@ -31,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
   accordionCustom();
   product();
   counter();
+  validate();
+  masks();
+  orderStage();
 
   tabs({
     tabParentSelector: '.b-header-desk-catalog',
