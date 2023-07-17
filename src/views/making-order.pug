@@ -77,13 +77,13 @@ block content
                                                             input.input__field(type="text" name="entrance" placeholder="Подъезд" required)
                                                             span.input__message
                                                         .input
-                                                            input.input__field(type="text" name="floor" placeholder="Этаж" required)
+                                                            input.input__field(type="text" inputmode="numeric" name="floor" placeholder="Этаж" required)
                                                             span.input__message
                                                         .input
-                                                            input.input__field(type="text" name="flat" placeholder="Квартира" required)
+                                                            input.input__field(type="text" inputmode="numeric" name="flat" placeholder="Квартира" required)
                                                             span.input__message
                                                         .input
-                                                            input.input__field(type="text" name="index" placeholder="Индекс" required)
+                                                            input.input__field(type="text" inputmode="numeric" name="index" placeholder="Индекс" required)
                                                             span.input__message
                                     .order-stage__section-map
                                         .order-stage__map(data-order-stage="map")
@@ -139,10 +139,10 @@ block content
                                                         input.input__field(type="text" name="fio" placeholder="ФИО" required)
                                                         span.input__message
                                                     .input
-                                                        input.input__field(type="text" name="email" placeholder="E-mail" required)
+                                                        input.input__field(type="text" inputmode="email" name="email" placeholder="E-mail" required)
                                                         span.input__message
                                                     .input
-                                                        input.input__field(type="text" name="phone" placeholder="Телефон" data-phone-mask required)
+                                                        input.input__field(type="text" inputmode="tel" name="phone" placeholder="Телефон" data-phone-mask required)
                                                         span.input__message
                                             .order-stage__wrap-data 
                                                 span.order-stage__data-title Данные о компании
@@ -152,16 +152,16 @@ block content
                                                         span.input__message
                                                     .order-stage__data-group-inputs 
                                                         .input
-                                                            input.input__field(type="text" name="kpp" placeholder="КПП" data-kpp-mask required)
+                                                            input.input__field(type="text" inputmode="numeric" name="kpp" placeholder="КПП" data-kpp-mask required)
                                                             span.input__message
                                                         .input
-                                                            input.input__field(type="text" name="paymentAccount" placeholder="Расчетный счет" data-payment-account-mask required)
+                                                            input.input__field(type="text" inputmode="numeric" name="paymentAccount" placeholder="Расчетный счет" data-payment-account-mask required)
                                                             span.input__message
                                                         .input
-                                                            input.input__field(type="text" name="inn" placeholder="ИНН" data-inn-mask required)
+                                                            input.input__field(type="text" inputmode="numeric" name="inn" placeholder="ИНН" data-inn-mask required)
                                                             span.input__message
                                                         .input
-                                                            input.input__field(type="text" name="bicBank" placeholder="БИК банка" data-bic-mask required)
+                                                            input.input__field(type="text" inputmode="numeric" name="bicBank" placeholder="БИК банка" data-bic-mask required)
                                                             span.input__message
                                                     .input
                                                         input.input__field(type="text" name="legalAddress" placeholder="Юридический адрес" required)

@@ -10,7 +10,8 @@ export default function validate() {
             inputs = form.querySelectorAll('.input'),
             dataReqexp = {
                 fio: /^[А-ЯЁа-яё]+(-[А-ЯЁа-яё]+)? [А-ЯЁа-яё]+( [А-ЯЁа-яё]+)?$/,
-                email: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/
+                email: /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/,
+                numbers: /^\d+$/ 
             },
             error = (input, msg = 'Обязательное поле') => {
                 const message = input.querySelector('.input__message')
@@ -26,12 +27,18 @@ export default function validate() {
                     }
                 }
             },
+            checkingNumbers = (input, msg) => {
+                const field = input.querySelector('input')
+                if (field.value.match(dataReqexp.numbers)) {
+                    error(input).remove()
+                } else {
+                    error(input, msg).set()
+                }
+            },
             validateInput = (input) => {
                 const field = input.querySelector('input'),
                 name = field.getAttribute('name'),
-                valueField = field.value,
-                placeholder = field.getAttribute('placeholder'),
-                message = input.querySelector('.input__message')
+                valueField = field.value
 
                 if (field.hasAttribute('required')) {
                     if (valueField !== '') {
@@ -99,6 +106,20 @@ export default function validate() {
                                 } else {
                                     error(input, 'Введите корректный адрес').set()
                                 }
+                                break
+                            case 'index':
+                                checkingNumbers(input, 'Введите корректный индекс')
+                                break
+                            case 'flat':
+                                checkingNumbers(input, 'Введите корректный номер квартиры')
+                                break
+                            case 'floor':
+                                // if (valueField.match(dataReqexp.numbers)) {
+                                //     error(input).remove()
+                                // } else {
+                                //     error(input, 'Введите корректный номер').set()
+                                // }
+                                checkingNumbers(input, 'Введите корректный номер этажа')
                                 break
                             default:
                                 if (valueField.length !== 0) {
