@@ -71,6 +71,15 @@ block content
                 .product__content-main
                   .product__content-main-inner
                     .product__content-main-wrapper
+                      .color-selection
+                        span.color-selection__title Цвет: <b>Черный</b>
+                        ul.color-selection__list 
+                          li.color-selection__li.active
+                            a.color-selection__color(href="#" style="background-color: #010103;")
+                          li.color-selection__li 
+                            a.color-selection__color(href="#" style="background-color: #E3E3E3;")
+                          li.color-selection__li 
+                            a.color-selection__color(href="#" style="background-color: #fff;")
                       .product__characteristic
                         h2.product__characteristic-title Характеристики
                         .product__characteristic-row
@@ -214,7 +223,7 @@ block content
                       img.mainSlider__img(src=require("../icons/pdf.svg") alt="pdf-icon")
         section.bestPrice
           .container
-            h2.h2.h2--flex Похожие товары
+            h2.h2.h2--flex Товары из этой коллекции
             .best__price-slider
               .swiper-wrapper
                 - for (var i = 0; i < 10; ++i) {

@@ -73,6 +73,12 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .product {
+        &__content-main-wrapper {
+            grid-row-gap: 24px;
+        }
+    }
+
     .basket {
 
         .container {
@@ -149,6 +155,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .product {
+        &__content-main-wrapper {
+            grid-row-gap: 20px;
+        }
+    }
+
     .favourites {
         .container {
             padding-bottom: 46px;

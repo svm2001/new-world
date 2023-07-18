@@ -369,6 +369,8 @@
   }
 
   &__content-main-wrapper {
+    display: grid;
+    grid-row-gap: 32px;
     margin-right: 32px;
     width: 100%;
     max-width: 355px;
