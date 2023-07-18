@@ -12,6 +12,66 @@
     }
 }
 
+@media screen and (max-width: 1200px) {
+    .favourites {
+
+        .container {
+            padding-bottom: 50px;
+        }
+
+        .catalog__card:before {
+            display: none;
+        }
+
+        &__list {
+            margin-top: 25px;
+
+            &::after {
+                display: none;
+            }
+
+            .card {
+                flex-basis: 25%;
+                width: 25%;
+                margin-bottom: 0;
+                padding: 6px;
+                box-shadow: none;
+                background-color: transparent;
+                border-radius: 0;
+
+                &__label {
+                    top: 18px;
+                    left: 18px;
+                }
+
+                &__wrapper {
+                    padding: 12px;
+                    border-radius: 12px;
+                    background-color: vars.$white;
+                    box-shadow: 0px 2px 24px 0px rgba(48, 46, 56, 0.06);
+                }
+
+                .swiper-pagination {
+                    bottom: 5px !important;
+                }
+
+                .swiper-slide {
+                    padding: 0;
+                }
+
+                &__img-slider {
+                    min-height: 220px;
+                    max-height: 220px;
+
+                    img {
+                        max-height: 220px;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 1024px) {
     .basket {
 
@@ -77,7 +137,24 @@
     }
 }
 
+@media screen and (max-width: 992px) {
+    .favourites {
+        &__list {
+            .card {
+                flex-basis: 33.3333%;
+                width: 33.3333%;
+            }
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
+    .favourites {
+        .container {
+            padding-bottom: 46px;
+        }
+    }
+
     .basket {
 
         .container {
@@ -144,23 +221,32 @@
 }
 
 @media screen and (max-width: 700px) {
+    .favourites {
+        &__list {
+            .card {
+                flex-basis: 50%;
+                width: 50%;
+            }
+        }
+    }
+
     .basket {
 
         &__title {
             font-size: 24px;
         }
 
-        &__empty-basket {
-            grid-column-gap: 4px;
-
-            svg {
-                width: 20px;
-                height: 20px;
-            }
-        }
-
         &__list-features {
             display: none;
+        }
+    }
+
+    .btn-cleaning {
+        grid-column-gap: 4px;
+
+        svg {
+            width: 20px;
+            height: 20px;
         }
     }
 
@@ -245,6 +331,48 @@
         &__wrap-price {
             .order-details__title {
                 font-size: 18px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .favourites {
+
+        &.catalog h1 {
+            font-size: 24px;
+        }
+
+        .btn-cleaning {
+            transform: translateY(-2px);
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        &__list {
+            margin-top: 24px;
+
+            .card {
+                padding: 8px 4px;
+
+                &__wrapper {
+                    padding: 8px;
+                }
+
+                &__label {
+                    top: 16px;
+                    left: 13px;
+                    justify-content: start;
+
+                    &--new,
+                    &--discount {
+                        font-size: 11px;
+                        padding: 2px 6px;
+                        width: max-content;
+                    }
+                }
             }
         }
     }

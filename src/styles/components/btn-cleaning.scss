@@ -1,0 +1,34 @@
+@use "../vars";
+
+.btn-cleaning {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    grid-column-gap: 8px;
+    justify-content: end;
+
+    &:hover {
+        svg path {
+            stroke: vars.$redActive;
+        }
+
+        span {
+            color: vars.$redActive;
+        }
+    }
+
+    span {
+        color: vars.$gray;
+        letter-spacing: -0.24px;
+        transition: color 0.3s;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        
+        path {
+            transition: stroke 0.3s;
+        }
+    }
+}

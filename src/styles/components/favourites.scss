@@ -1,0 +1,41 @@
+@use "../vars";
+
+.favourites {
+
+    &.catalog h1 {
+        margin-bottom: 0;
+    }
+
+    &__block-title {
+        display: grid;
+        grid-auto-flow: column;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+    &__list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 32px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            bottom: 40px;
+            height: 1px;
+            background-color: vars.$white;
+        }
+
+        .card {
+            flex-basis: 20%;
+        }
+
+        .product-card_img-container {
+            min-height: 254px;
+            height: 254px;
+            max-height: 254px;
+        }
+    }
+}
