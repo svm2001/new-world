@@ -70,6 +70,67 @@
     }
   }
 
+  &__color-choice {
+    margin-bottom: 24px;
+    @include responsive.media-breakpoint-down(700) {
+      margin-bottom: 20px;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      span:nth-child(1) {
+        color: #636B71
+      }
+    }
+    &-wrp {
+      display: flex;
+      gap: 13px;
+    }
+
+    &-item {
+      width: 48px;
+      height: 48px;
+      border-radius: 999px;
+      position: relative;
+      @include responsive.media-breakpoint-down(700) {
+        width: 32px;
+        height: 32px;
+      }
+      &:before {
+        content: '';
+        position: absolute;
+        width: 54px;
+        height: 54px;
+        border: 1.5px solid transparent;
+        border-radius: 999px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @include responsive.media-breakpoint-down(700) {
+          width: 38px;
+          height: 38px;
+        }
+      }
+      &.active:before {
+        border: 1.5px solid vars.$red;
+      }
+      &:nth-child(1) {
+        background: black;
+        border: 1px solid black;
+      }
+      &:nth-child(2) {
+        background: gray;
+        border: 1px solid gray;
+      }
+      &:nth-child(3) {
+        background: white;
+        border: 1px solid #d3d3d3;
+      }
+
+    }
+  }
+
   &__slider--add {
     max-width: 82px;
     min-width: 82px;

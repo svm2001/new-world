@@ -3,15 +3,33 @@
 
 .filter__result-float {
   position: absolute;
-  padding: 10px;
+  padding: 0;
   border-radius: 8px;
-  border: 1px solid vars.$lightgray;
-  background: vars.$white;
-  right: -167px;
+  border: 1px solid vars.$red;
+  background: vars.$red;
+  right: -156px;
   z-index: 25;
   visibility: hidden;
   transform: scale(0);
   transition: .3s;
+  &:hover {
+    .btn {
+
+    }
+  }
+  &:hover:before {
+
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -47px;
+    border: 12px solid transparent;
+    border-right: 35px solid #FE412D;
+    transition: .3s;
+  }
   &.visible {
     visibility: visible;
     transform: scale(1);
@@ -21,7 +39,11 @@
     font-size: 13px;
   }
   .btn {
-    padding: 5px 29px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   @include responsive.media-breakpoint-down(576) {
     display: none;

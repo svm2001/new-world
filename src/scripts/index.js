@@ -38,6 +38,14 @@ document.addEventListener('DOMContentLoaded', () => {
     tabItemActiveClass: 'b-header-desk-catalog-content--active',
     event: 'click'
   })
+  if(document.querySelector('.product__color-choice-wrp')) {
+    tabs({
+      tabParentSelector: '.product__color-choice-wrp',
+      tabHeaderSelector: '.product__color-choice-item',
+      tabHeaderActiveClass: 'active',
+      event: 'click'
+    })
+  }
 
   if(document.querySelector('.product__tabs')) {
     tabs({
@@ -65,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     lightGallery(document.querySelector('#productCardSliderMain .slick-track'), {
       mode: 'lg-tube',
       cssEasing: 'cubic-bezier(0.680, -0.550, 0.265, 1.550)',
-      speed: 1000,
+      speed: 300,
       thumbnail: true
     });
   }

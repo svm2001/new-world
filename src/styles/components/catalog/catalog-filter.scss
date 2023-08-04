@@ -252,6 +252,7 @@
       left: -100%;
       width: 100%;
       max-width: 983px;
+      min-width: 100vw;
       background: rgba(0,0,0,.5);
       z-index: 26;
       transition: .5s;
@@ -292,8 +293,7 @@
     }
 
     .filter__result-float {
-      right: calc(50% - 164px);
-      border-radius: 0 8px 8px 0;
+      right: calc(50% - 166px);
       border: none;
     }
   }

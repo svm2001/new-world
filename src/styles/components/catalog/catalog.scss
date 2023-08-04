@@ -37,22 +37,35 @@
   &__card-list {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
   }
 
   &__card {
-    flex-basis: 25%;
-    width: 25%;
+    flex-basis: 24.48%;
     margin-bottom: 80px;
     position: relative;
     border: none;
-    padding: 18px;
-    @include responsive.media-breakpoint-down(1600)  {
-      padding: 8px;
+    padding: 0;
+    .card__content {
+      padding: 0 8px 8px 8px;
+    }
+    @include responsive.media-breakpoint-down(1600) {
+      flex-basis: 24.36%;
+    }
+    @include responsive.media-breakpoint-down(1600) {
+      flex-basis: 24.29%;
     }
     @include responsive.media-breakpoint-down(1200) {
-      flex-basis: 33.33%;
-      width: 33.33%;
-      max-width: 400px;
+      max-width: calc(222px + (273 - 222) * ((100vw - 1025px) / (1200 - 1024)));
+    }
+    @include responsive.media-breakpoint-down(1024) {
+      max-width: calc(229px + (236 - 229) * ((100vw - 991px) / (1024 - 991)));
+    }
+    @include responsive.media-breakpoint-down(991) {
+      max-width: calc(235px + (304 - 235) * ((100vw - 767px) / (991 - 767)));
+    }
+    @include responsive.media-breakpoint-down(680) {
+      max-width: calc(139px + (314 - 139) * ((100vw - 320px) / (680 - 320)));
     }
     &:before {
       position: absolute;
@@ -84,12 +97,8 @@
   }
 
   .card__label {
-    top: 18px;
-    left: 18px;
-    @include responsive.media-breakpoint-down(1600) {
-      top: 8px;
-      left: 8px;
-    }
+    top: 8px;
+    left: 8px;
   }
 
   &__filters-inner-container {
@@ -129,6 +138,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row-reverse;
   }
 
   &__filters-top {
@@ -152,8 +162,8 @@
   }
 
   .card__favourite {
-    top: 16px;
-    right: 16px;
+    top: 8px;
+    right: 8px;
   }
 
   @include responsive.media-breakpoint-down(1200) {
@@ -161,9 +171,18 @@
       bottom: 25px;
     }
 
+    .catalog__card .swiper-slide {
+      padding: 0;
+    }
+
     .card__img-slider {
-      max-height: 176px;
-      min-height: 176px;
+      max-height: 220px;
+      min-height: 220px;
+    }
+
+    .card__img-slider img {
+      min-height: 210px;
+      max-height: 210px;
     }
   }
 
@@ -189,8 +208,6 @@
       display: flex;
     }
     &__card {
-      width: 31.8%;
-      flex-basis: 31.8%;
       margin-bottom: 12px;
       &:before, &:after {
         display:none;
@@ -270,8 +287,6 @@
 
   @include responsive.media-breakpoint-down(680) {
     &__card {
-      width: 49%;
-      flex-basis: 49%;
       margin-bottom: 10px;
     }
   }
