@@ -1,0 +1,24 @@
+@use "../vars";
+
+.privacy-policy {
+
+    span, a {
+        font-size: 16px;
+        line-height: 1.5em;
+        letter-spacing: -0.24px;
+    }
+
+    span {
+        color: vars.$gray;
+    }
+
+    a {
+        display: inline;
+        color: vars.$red;
+        transition: color 0.3s;
+
+        &:hover {
+            color: vars.$redActive;
+        }
+    }
+}

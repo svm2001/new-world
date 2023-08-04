@@ -1,0 +1,87 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.order-details {
+    position: relative;
+    display: grid;
+    grid-row-gap: 20px;
+    align-items: start;
+    border-radius: 12px;
+    background-color: vars.$lightgray2;
+    padding: 24px;
+
+    .btn {
+        padding: 11px 29px;
+
+        &:hover span {
+            color: vars.$red;
+        }
+
+        span {
+            color: vars.$white;
+            transition: color 0.3s;
+        }
+    }
+
+    &__info {}
+
+    &__title {
+        font-size: 22px;
+        font-weight: 500;
+        color: vars.$dark;
+    }
+
+    &__list {
+        display: grid;
+        grid-row-gap: 8px;
+        margin-top: 8px;
+
+        li {
+            display: grid;
+            grid-auto-flow: column;
+            align-items: center;
+            justify-content: space-between;
+            grid-column-gap: 15px;
+            list-style-type: none;
+
+            span {
+                font-size: 16px;
+
+                &:first-child {
+                    color: vars.$gray;
+                }
+
+                &:last-child {
+                    color: vars.$dark;
+                }
+            }
+        }
+    }
+
+    &__wrap-price {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-between;
+        grid-column-gap: 15px;
+        padding-top: 20px;
+        border-top: 1px solid vars.$lightgray;
+    }
+
+    &__inner-price {
+        display: grid;
+        grid-row-gap: 4px;
+    }
+
+    &__old-price {
+        font-size: 14px;
+        color: vars.$gray;
+        text-decoration: line-through;
+    }
+
+    &__price {
+        font-size: 20px;
+        font-weight: 600;
+        letter-spacing: -0.4px;
+        color: vars.$dark;
+    }
+}

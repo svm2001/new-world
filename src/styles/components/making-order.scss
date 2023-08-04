@@ -1,0 +1,33 @@
+.making-order {
+
+    .container {
+        padding-bottom: 80px;
+    }
+
+    &__content {}
+
+    &__inner {
+        display: grid;
+        grid-template-columns: minmax(100px, 1030px) 350px;
+        justify-content: space-between;
+        align-items: start;
+        grid-column-gap: 15px;
+        grid-column-gap: 40px;
+        margin-top: 32px;
+    }
+
+    &__wrap-stages {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    &__wrap-aside-info {
+        display: grid;
+        grid-row-gap: 20px;
+    }
+
+    &__wrap-info-blocks {
+        display: grid;
+        grid-row-gap: 8px;
+    }
+}

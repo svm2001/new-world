@@ -1,0 +1,45 @@
+@use "../vars";
+
+.input {
+
+    &--error {
+        .input {
+            &__field {
+                border-color: vars.$error;
+            }
+
+            &__message {
+                display: inline-block;
+                color: vars.$error;
+            }
+        }
+    }
+
+    &__field {
+        height: 48px;
+        font-size: 14px;
+        outline: none;
+        background-color: vars.$lightgray2;
+        width: 100%;
+        padding: 0 16px;
+        border: 1px solid;
+        border-color: transparent;
+        border-radius: 8px;
+        transition: border-color 0.3s;
+
+        &:focus {
+            border-color: vars.$dark;
+        }
+
+        &::placeholder {
+            color: vars.$gray;
+            font-size: 14px;
+        }
+    }
+
+    &__message {
+        display: none;
+        font-size: 12px;
+        transition: color 0.3s;
+    }
+}

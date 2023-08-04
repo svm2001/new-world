@@ -38,6 +38,7 @@
   "dependencies": {
     "accordion-js": "^3.3.4",
     "animejs": "^3.2.1",
+    "imask": "^7.1.2",
     "jquery": "^3.7.0",
     "jquery-slinky": "^4.2.1",
     "lottie-web": "^5.10.0",

@@ -15,6 +15,7 @@
 @use "components/city__search";
 @use "components/sliders";
 @use "components/card";
+@use "components/second-card";
 @use "components/popular__category";
 @use "components/new-world-vk";
 @use "components/main__shops";
@@ -28,6 +29,18 @@
 @use "components/product";
 @use "components/actions";
 @use "components/search";
+@use "components/basket";
+@use "components/counter";
+@use "components/order-details";
+@use "components/making-order";
+@use "components/privacy-policy";
+@use "components/info-block";
+@use "components/order-stage";
+@use "components/input";
+@use "components/textarea";
+@use "components/btn-cleaning";
+@use "components/favourites";
+@use "components/color-selection";
 
 @use "components/catalog/catalog";
 @use "components/catalog/catalog-filter";
@@ -114,3 +127,5 @@ body.lock {
   border-radius: 20px;       /* округлось бегунка */
   border: vars.$red;  /* отступ вокруг бегунка */
 }
+
+@import "./media";

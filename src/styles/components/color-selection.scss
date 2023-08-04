@@ -1,0 +1,64 @@
+@use "../vars";
+
+.color-selection {
+
+    &__title {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.24px;
+        color: vars.$gray;
+
+        b {
+            font-weight: inherit;
+            color: vars.$dark;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 31px);
+        grid-column-gap: 8px;
+        grid-row-gap: 8px;
+        list-style-type: none;
+        padding: 0;
+        margin: 12px 0 0 0;
+    }
+
+    &__li {
+        position: relative;
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 32px;
+        border-radius: 100%;
+
+        &.active::before {
+            border-color: vars.$red;
+            transform: translate(-50%, -50%) scale(1.2);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            border: 1px solid;
+            border-radius: 100%;
+            border-color: vars.$lightgray;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+    }
+
+    &__color {
+        display: block;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+    }
+}

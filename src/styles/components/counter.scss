@@ -1,0 +1,83 @@
+@use '../mixins/responsive';
+@use "../vars";
+
+.counter {
+    position: relative;
+    display: grid;
+    grid-template-columns: 32px 1fr 32px;
+    align-items: center;
+    justify-content: space-between;
+    width: 127px;
+    height: 48px;
+    padding: 8px;
+    border: 1px solid;
+    border-color: vars.$lightgray;
+    border-radius: 8px;
+    background-color: vars.$white;
+
+    &[disabled] {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    &__input,
+    &__btn {
+        height: 100%;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0;
+    }
+
+    &__input {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        color: #000;
+        transition: color 0.3s;
+
+        &[type="number"]::-webkit-outer-spin-button,
+        &[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    
+        &[type="number"] {
+            -moz-appearance: textfield;
+        }
+        &[type="number"]:hover,
+        &[type="number"]:focus {
+            -moz-appearance: number-input;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        border-radius: 2px;
+        cursor: pointer;
+        background-color: vars.$lightgray2;
+        transition: background-color 0.3s;
+
+        &:hover .counter__icon > path {
+            stroke: vars.$red;
+        }
+
+        &:disabled {
+            cursor: default;
+            opacity: 0.5;
+            pointer-events: none;
+        }
+    }
+
+    &__icon {
+
+        path {
+            stroke: vars.$dark;
+            // stroke-width: 2;
+            transition: stroke 0.3s;
+        }
+    }
+}
