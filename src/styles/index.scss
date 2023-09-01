@@ -40,11 +40,14 @@
 @use "components/textarea";
 @use "components/btn-cleaning";
 @use "components/favourites";
-@use "components/color-selection";
+@use "components/color-selection"; 
 
 @use "components/catalog/catalog";
 @use "components/catalog/catalog-filter";
 @use "components/catalog/catalog-card";
+
+@use "components/a-banner";
+@use "components/a-shop-card";
 
 @use "components/footer";
 @use "components/block__margins";
