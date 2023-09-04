@@ -320,7 +320,8 @@
 }
 
 @include responsive.media-breakpoint-up(768) {
-  .bestPrice .best__price-slider {
+  .bestPrice .best__price-slider,
+  .new-world-vk .new-world-vk__slider {
     overflow: visible;
 
     .swiper-horizontal>.swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
@@ -335,7 +336,8 @@
 }
 
 @include responsive.media-breakpoint-up(1200) {
-  .bestPrice .best__price-slider {
+  .bestPrice .best__price-slider,
+  .new-world-vk .new-world-vk__slider {
     overflow: hidden;
   }
 }

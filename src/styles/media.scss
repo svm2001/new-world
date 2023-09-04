@@ -80,6 +80,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .new-world-vk .vk_post .vk_post-img-wrapper {
+        height: 230px;
+      }
+
     .a-shop-card {
         grid-template-columns: max-content auto;
         grid-row-gap: 16px;
@@ -424,6 +428,28 @@
 }
 
 @media screen and (max-width: 576px) {
+    .new-world-vk .new-world-vk__slider .swiper-scrollbar {
+        display: none !important;
+    }
+    .new-world-vk {
+        margin-bottom: 82px;
+    }
+    .new-world-vk .vk_post .vk_post-img-wrapper {
+        height: 225px;
+    }
+    .new-world-vk .vk_post {
+        width: 225px;
+    }
+    .new-world-vk .swiper-slide {
+        width: max-content;
+    }
+    .new-world-vk .vk_post__tag {
+        border: 0;
+        padding: 0;
+        height: max-content;
+        width: 100%;
+        color: vars.$gray;
+    }
     .a-banner {
         min-height: 180px;
 

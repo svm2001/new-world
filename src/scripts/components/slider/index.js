@@ -63,33 +63,47 @@ export function slider() {
   });
   const vkSlider = new Swiper('.new-world-vk__slider', {
     breakpointsInverse: true,
-    slidesPerView: 1,
-    spaceBetween: 25,
+    slidesPerView: 'auto',
+    spaceBetween: 12,
     loop: true,
     speed: 1000,
     navigation: {                       //navigation(arrows)
       nextEl: ".arrow-right",
       prevEl: ".arrow-left",
     },
-    // autoplay: {
-    //   delay: 3000,
-    // },
-    breakpoints: {
-      568: {
-        slidesPerView: 2
-      },
-      768: {
-        slidesPerView: 3
-      },
-      1024: {
-        slidesPerView: 4
-      },
-    },
     pagination: {
       el: '.new-world-vk__slider .swiper-pagination',
       clickable: true,
     },
-    scrollbar: false,
+    // autoplay: {
+    //   delay: 3000,
+    // },
+    breakpoints: {
+      577: {
+        pagination: false,
+        slidesPerView: 3,
+        spaceBetween: 16,
+      },
+      568: {
+        slidesPerView: 3,
+        pagination: false,
+        spaceBetween: 16,
+      },
+      768: {
+        slidesPerView: 4,
+        pagination: false,
+        spaceBetween: 16,
+      },
+      1024: {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        pagination: false
+      },
+    },
+    scrollbar: {
+      el: '.new-world-vk__slider .swiper-scrollbar',
+      draggable: true,
+    }
   });
   const shopSlider = new Swiper('.main-shops__slider', {
     breakpointsInverse: true,
