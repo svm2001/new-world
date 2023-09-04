@@ -12,6 +12,7 @@ module.exports = (env) => ({
     search: path.join(__dirname, "src", "views", "search.pug"),
     ui: path.join(__dirname, "src", "views", "ui.pug"),
     basket: path.join(__dirname, "src", "views", "basket.pug"),
+    emptyBasket: path.join(__dirname, "src", "views", "empty-basket.pug"),
     makingOrder: path.join(__dirname, "src", "views", "making-order.pug"),
     favourites: path.join(__dirname, "src", "views", "favourites.pug"),
   },

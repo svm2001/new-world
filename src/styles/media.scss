@@ -145,6 +145,11 @@
 
         .btn {
             padding: 8px 29px;
+            font-weight: 500;
+
+            span {
+                font-weight: 400;
+            }
         }
 
         &__title {

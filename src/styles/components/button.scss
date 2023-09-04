@@ -17,6 +17,16 @@
   &:active {
     transform: scale(.95);
   }
+  &[disabled] {
+    pointer-events: none;
+    background-color: #E9E9E9;
+    color: vars.$gray;
+    border-color: #E9E9E9;
+
+    span {
+      color: vars.$gray;
+    }
+  }
   &--reverse {
     background: vars.$white;
     padding: 13px 29px;

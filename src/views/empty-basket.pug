@@ -1,0 +1,44 @@
+extends layouts/Main
+include components/header
+include components/footer
+include components/burger__menu
+include components/breadcrumbs
+
+include components/city__search
+include components/bot__menu
+include components/burger__catalog
+include components/search__goods
+include components/scrollToTop
+include components/pagination
+include components/filter__result-float
+
+block title
+    title Пустая корзина
+block content
+    +bot__menu
+    +burger__catalog
+    +city__search
+    +search__goods
+    +scrollToTop
+
+    .wrapper.basket
+        +header
+        main
+            .container
+                +breadcrumbs
+
+                .basket__content
+                    .basket__block-title
+                        h1.basket__title Корзина<span></span>
+                    .basket__inner
+                        .basket__block-empty-basket
+                          h3.basket__empty-title Ваша корзина пока пуста
+                          span.basket__empty-subtitle Найдите то, что Вам нужно в каталоге или при помощи поиска
+                          a(class="btn basket__empty-btn" href="#") Вернуться в каталог
+                        .order-details.order-details--empty-basket
+                            .order-details__info 
+                                span.order-details__title Детали заказа
+                                span.order-details__empty-basket В корзине нет товаров
+                            a(class="btn" disabled href="#")
+                                span Оформить заказ
+        +footer

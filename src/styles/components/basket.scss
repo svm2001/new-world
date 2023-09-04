@@ -6,6 +6,39 @@
         padding-bottom: 80px;
     }
 
+    &__block-empty-basket {
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        min-height: 230px;
+    }
+
+    &__empty-title,
+    &__empty-subtitle {
+        text-align: center;
+    }
+
+    &__empty-title {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.35em;
+        letter-spacing: -0.286px;
+    }
+
+    &__empty-subtitle {
+        margin-top: 8px;
+        color: vars.$gray;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1.5em;
+        letter-spacing: -0.24px;
+    }
+
+    &__empty-btn.btn {
+        margin-top: 24px;
+        padding: 12px 20px;
+    }
+
     &__content {}
 
     &__block-title {
