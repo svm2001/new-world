@@ -55,14 +55,16 @@ block content
                                                         span.order-stage__option-subtitle Курьером до двери, бесплатно при заказе от 3000 руб.
                                     .order-stage__section-info-map
                                         .order-stage__wrap-info
-                                            h2.order-stage__title Магазин «Новый мир»
-                                            .order-stage__block-info
-                                                img.order-stage__info-icon(src=require("../icons/map-pin-1.svg") alt="icon")
-                                                span.order-stage__info-text Краснодарский край, г. Славянск-на-Кубани, ул. Крупской, 280, Славянск-на-Кубани
-                                            .order-stage__block-info
-                                                img.order-stage__info-icon(src=require("../icons/clock-1.svg") alt="icon")
-                                                span.order-stage__info-text Ежедневно, 08:00–19:00
-                                            button.order-stage__info-btn(type="button") Открыть на карте
+                                            //- .a-radio
+                                            //-     label.a-radio__label(data-role="")
+                                            //-         input.a-radio__input(type="radio" name="2" value="" checked)
+                                            //-         span.a-radio__text ул. Крупской, 280, Славянск-на-Кубани
+                                            //-         span.a-radio__decore
+                                            //- .a-radio
+                                            //-     label.a-radio__label(data-role="")
+                                            //-         input.a-radio__input(type="radio" name="2" value="")
+                                            //-         span.a-radio__text ул. Московская, Славянск-на-Кубани
+                                            //-         span.a-radio__decore
                                         .order-stage__mini-map(data-order-stage="mini-map")
                                     .order-stage__section-form
                                         .order-stage__form
@@ -86,7 +88,7 @@ block content
                                                             input.input__field(type="text" inputmode="numeric" name="index" placeholder="Индекс" required)
                                                             span.input__message
                                     .order-stage__section-map
-                                        .order-stage__map(data-order-stage="map")
+                                        .order-stage__map(data-order-stage="map" style="background-image: url('https://cdekpromo.ru/dogovor-okazaniya-uslug-cdek.jpg');")
                                 .order-stage__block-selected-data
                                     .order-stage__block-data
                                         img.order-stage__data-icon(src=require("../icons/map-pin-1.svg") alt="icon")
@@ -102,22 +104,40 @@ block content
                                     h2.order-stage__title Способ оплаты
                                     button.order-stage__btn-change(type="button" data-order-stage="btn-change") Изменить
                                 .order-stage__block-body 
-                                    .order-stage__section-options
-                                        .order-stage__option
-                                            label.order-stage__option-label(data-role="")
-                                                input.order-stage__option-input(type="radio" name="2" value="" checked)
-                                                span.order-stage__option-content
-                                                    img.order-stage__option-icon(src=require("../icons/credit-card.svg") alt="icon")
-                                                    .order-stage__option-info 
-                                                        span.order-stage__option-title Банковская карта
-                                        .order-stage__option
-                                            label.order-stage__option-label(data-role="")
-                                                input.order-stage__option-input(type="radio" name="2" value="")
-                                                span.order-stage__option-content
-                                                    img.order-stage__option-icon(src=require("../icons/file-text.svg") alt="icon")
-                                                    .order-stage__option-info 
-                                                        span.order-stage__option-title Банковский счет
-                                                        span.order-stage__option-subtitle Оплата через р/с для юр. лиц
+                                    .order-stage__section-options.order-stage__section-options--second
+                                        .order-stage__option-second
+                                            label.order-stage__option-second-label(data-role="")
+                                                input.order-stage__option-second-input(type="radio" name="3" value="" checked)
+                                                span.order-stage__option-second-content
+                                                    .order-stage__option-second-block-icon
+                                                        svg(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none")
+                                                            g(clip-path="url(#clip0_3371_31905)")
+                                                                path(d="M27.5024 5.29532C27.1396 4.86646 26.6316 4.60451 26.0717 4.55775L6.35384 2.91133C5.79395 2.86458 5.2496 3.03865 4.82068 3.40139C4.39352 3.76271 4.13195 4.26818 4.08372 4.82528L3.68702 8.54708H2.103C0.94341 8.54708 0 9.49049 0 10.6501V22.9931C0 24.1527 0.94341 25.0961 2.103 25.0961H21.8896C23.0492 25.0961 23.9926 24.1527 23.9926 22.9931V20.9908L24.6948 21.0495C24.754 21.0544 24.8129 21.0568 24.8713 21.0568C25.9523 21.0568 26.8739 20.2251 26.9655 19.1287L27.9926 6.82853C28.0393 6.2687 27.8652 5.72423 27.5024 5.29532ZM2.103 9.64082H21.8896C22.4461 9.64082 22.8989 10.0936 22.8989 10.6501V11.7748H1.09375V10.6501C1.09375 10.0936 1.5465 9.64082 2.103 9.64082ZM1.09375 12.8685H22.8989V15.1374H1.09375V12.8685ZM21.8896 24.0024H2.103C1.5465 24.0024 1.09375 23.5496 1.09375 22.9931V16.2312H22.8989V22.9931C22.8989 23.5496 22.4461 24.0024 21.8896 24.0024ZM26.9026 6.73747L25.8755 19.0377C25.8292 19.5923 25.3402 20.006 24.7858 19.9595L23.9926 19.8933V10.6501C23.9926 9.49049 23.0492 8.54708 21.8896 8.54708H4.787L5.17194 4.93553C5.17238 4.93137 5.17276 4.92727 5.17309 4.92306C5.21941 4.36848 5.7081 3.95482 6.26284 4.00131L25.9808 5.64772C26.2495 5.67014 26.4933 5.79587 26.6674 6.00171C26.8414 6.20756 26.925 6.4688 26.9026 6.73747Z" fill="#636B71")
+                                                                path(d="M20.6109 17.8571H15.3477C15.0456 17.8571 14.8008 18.102 14.8008 18.404V21.8378C14.8008 22.1398 15.0456 22.3846 15.3477 22.3846H20.6109C20.9129 22.3846 21.1578 22.1398 21.1578 21.8378V18.404C21.1578 18.102 20.9129 17.8571 20.6109 17.8571ZM20.064 21.2909H15.8945V18.9509H20.064V21.2909Z" fill="#636B71")
+                                                            defs
+                                                                clipPath(id="clip0_3371_31905")
+                                                                    rect(width="28" height="28" fill="white")
+                                                    .order-stage__option-second-info 
+                                                        span.order-stage__option-second-title Купить онлайн за 5 731 ₽
+                                                        //- span.order-stage__option-second-discount -300 ₽
+                                        .order-stage__option-second
+                                            label.order-stage__option-second-label(data-role="")
+                                                input.order-stage__option-second-input(type="radio" name="3" value="" checked)
+                                                span.order-stage__option-second-content
+                                                    .order-stage__option-second-block-icon
+                                                        svg(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none")
+                                                            path(d="M25.9226 6.79979L14.2719 0.0732948C14.1027 -0.0244316 13.8942 -0.0244316 13.725 0.0732948L2.07422 6.79979C1.90502 6.89746 1.80078 7.07804 1.80078 7.27338V20.7265C1.80078 20.9219 1.90502 21.1025 2.07422 21.2001L13.725 27.9267C13.8942 28.0244 14.1027 28.0244 14.2719 27.9267L25.9226 21.2001C26.0918 21.1025 26.1961 20.9219 26.1961 20.7265V7.27344C26.1961 7.07804 26.0918 6.89746 25.9226 6.79979ZM13.9984 1.17836L24.5554 7.27344L21.8009 8.86375L11.244 2.76862L13.9984 1.17836ZM13.9984 13.3685L3.44146 7.27338L5.93438 5.83412L16.4913 11.9292L13.9984 13.3685ZM10.1502 3.40009L20.7072 9.49517L17.585 11.2977L7.02813 5.20264L10.1502 3.40009ZM18.132 12.2449L21.2541 10.4424V13.6864L20.0485 13.4222C19.8482 13.3781 19.6401 13.4502 19.5096 13.6083L18.132 15.278V12.2449H18.132ZM2.89453 8.22057L13.4515 14.3156V26.5059L2.89453 20.4108V8.22057ZM14.5453 26.5059V14.3156L17.0382 12.8764V16.8001C17.0382 17.0309 17.183 17.2368 17.4002 17.3148C17.4606 17.3365 17.5231 17.3471 17.585 17.3471C17.7451 17.347 17.901 17.2766 18.007 17.1482L20.1407 14.5621L21.684 14.9004C21.8456 14.9357 22.0148 14.8961 22.1438 14.7922C22.2728 14.6884 22.3479 14.5317 22.3479 14.3661V9.81088L25.1023 8.22062V20.4108L14.5453 26.5059Z" fill="#636B71")
+                                                    .order-stage__option-second-info 
+                                                        span.order-stage__option-second-title Оплата при получении
+                                        .order-stage__option-second
+                                            label.order-stage__option-second-label(data-role="")
+                                                input.order-stage__option-second-input(type="radio" name="3" value="" checked)
+                                                span.order-stage__option-second-content
+                                                    .order-stage__option-second-block-icon
+                                                        svg(xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none")
+                                                            path(fill-rule="evenodd" clip-rule="evenodd" d="M11.7317 24.724L20.8054 26.2404C21.2429 26.313 21.6909 26.2098 22.0523 25.9516C22.4137 25.6944 22.6578 25.3033 22.7304 24.8658C23.3648 21.0709 25.3335 9.289 25.9679 5.49325C26.1202 4.58238 25.505 3.7205 24.5942 3.56825L20.7013 2.91725C20.4913 2.23388 19.8543 1.73688 19.1018 1.73688H8.60966C8.36991 1.73688 8.13978 1.83225 7.97003 2.002C6.84565 3.12638 2.53103 7.441 2.53103 7.441C2.44353 7.5285 2.39453 7.64663 2.39453 7.77V23.051C2.39453 23.975 3.14353 24.724 4.06753 24.724H11.7317ZM20.7739 3.87188L20.7748 23.051C20.7748 23.4946 20.5989 23.9199 20.2848 24.234C19.9715 24.5473 19.5454 24.724 19.1018 24.724H17.3728L20.9585 25.3225C21.1528 25.3558 21.3523 25.3094 21.5124 25.1948C21.6725 25.0801 21.781 24.9069 21.8134 24.7126C22.4478 20.9169 24.4165 9.13588 25.0509 5.34013C25.1183 4.935 24.8453 4.55263 24.441 4.48525L20.7739 3.87188ZM4.06753 23.7939H19.1018C19.2995 23.7939 19.4885 23.716 19.6277 23.576C19.7668 23.4369 19.8447 23.2479 19.8447 23.051V3.40988C19.8447 2.9995 19.5122 2.667 19.1018 2.667H8.89228V7.77C8.89228 8.02638 8.68403 8.23463 8.42766 8.23463H3.32466V23.051C3.32466 23.4614 3.65716 23.7939 4.06753 23.7939ZM6.54553 20.9344H17.2223C17.4787 20.9344 17.6869 20.7261 17.6869 20.4689C17.6869 20.2125 17.4787 20.0043 17.2223 20.0043H6.54553C6.28916 20.0043 6.08091 20.2125 6.08091 20.4689C6.08091 20.7261 6.28916 20.9344 6.54553 20.9344ZM6.54553 17.591H17.2223C17.4787 17.591 17.6869 17.3828 17.6869 17.1264C17.6869 16.87 17.4787 16.6618 17.2223 16.6618H6.54553C6.28916 16.6618 6.08091 16.87 6.08091 17.1264C6.08091 17.3828 6.28916 17.591 6.54553 17.591ZM6.54553 14.2485H17.2223C17.4787 14.2485 17.6869 14.0403 17.6869 13.7839C17.6869 13.5275 17.4787 13.3184 17.2223 13.3184H6.54553C6.28916 13.3184 6.08091 13.5275 6.08091 13.7839C6.08091 14.0403 6.28916 14.2485 6.54553 14.2485ZM6.54553 10.906H17.2223C17.4787 10.906 17.6869 10.6978 17.6869 10.4405C17.6869 10.1841 17.4787 9.97588 17.2223 9.97588H6.54553C6.28916 9.97588 6.08091 10.1841 6.08091 10.4405C6.08091 10.6978 6.28916 10.906 6.54553 10.906ZM11.4307 7.56263H17.2223C17.4787 7.56263 17.6869 7.35438 17.6869 7.098C17.6869 6.84163 17.4787 6.63338 17.2223 6.63338H11.4307C11.1743 6.63338 10.966 6.84163 10.966 7.098C10.966 7.35438 11.1743 7.56263 11.4307 7.56263ZM7.96303 3.32413V7.30538H3.98178L7.96303 3.32413Z" fill="#636B71")
+                                                    .order-stage__option-second-info 
+                                                        span.order-stage__option-second-title Банковский счет
                                 .order-stage__block-selected-data
                                     .order-stage__block-data
                                         img.order-stage__data-icon(src=require("../icons/credit-card.svg") alt="icon")
@@ -125,56 +145,63 @@ block content
                                 .order-stage__block-footer 
                                     button.btn(type="button" data-order-stage="btn-next" aria-label="Далее")
                                         span Далее
-                            .order-stage(data-order-stage="main")
+                            .order-stage.order-stage--recipient(data-order-stage="main")
                                 .order-stage__block-head
                                     h2.order-stage__title Получатель
+                                    span.order-stage__subtitle * поля обязательны к заполнению
                                     button.order-stage__btn-change(type="button" data-order-stage="btn-change") Изменить
                                 .order-stage__block-body 
                                     .order-stage__section-form 
                                         .order-stage__form
-                                            .order-stage__wrap-data 
+                                            .order-stage__wrap-data.order-stage__wrap-data--second
                                                 span.order-stage__data-title Личные данные
                                                 .order-stage__data-inputs 
                                                     .input
-                                                        input.input__field(type="text" name="fio" placeholder="ФИО" required)
+                                                        input.input__field(type="text" name="name" placeholder="Имя *" required)
                                                         span.input__message
                                                     .input
-                                                        input.input__field(type="text" inputmode="email" name="email" placeholder="E-mail" required)
+                                                        input.input__field(type="text" inputmode="email" name="email" placeholder="E-mail")
                                                         span.input__message
                                                     .input
-                                                        input.input__field(type="text" inputmode="tel" name="phone" placeholder="Телефон" data-phone-mask required)
+                                                        input.input__field(type="text" inputmode="tel" name="phone" placeholder="Телефон *" data-phone-mask required)
                                                         span.input__message
+                                                    .input
+                                                        input.input__field(type="text" inputmode="tel" name="phone" placeholder="Доп. телефон" data-phone-mask)
+                                                        span.input__message
+                                                    .textarea
+                                                        textarea.textarea__field(name="comment" placeholder="Комментарий к заказу")
+                                                        span.textarea__message
                                             .order-stage__wrap-data 
                                                 span.order-stage__data-title Данные о компании
                                                 .order-stage__data-inputs 
                                                     .input
-                                                        input.input__field(type="text" name="nameCompany" placeholder="Название компании")
+                                                        input.input__field(type="text" name="nameCompany" placeholder="Название компании *" required)
                                                         span.input__message
-                                                    .order-stage__data-group-inputs 
-                                                        .input
-                                                            input.input__field(type="text" inputmode="numeric" name="kpp" placeholder="КПП" data-kpp-mask required)
-                                                            span.input__message
-                                                        .input
-                                                            input.input__field(type="text" inputmode="numeric" name="paymentAccount" placeholder="Расчетный счет" data-payment-account-mask required)
-                                                            span.input__message
-                                                        .input
-                                                            input.input__field(type="text" inputmode="numeric" name="inn" placeholder="ИНН" data-inn-mask required)
-                                                            span.input__message
-                                                        .input
-                                                            input.input__field(type="text" inputmode="numeric" name="bicBank" placeholder="БИК банка" data-bic-mask required)
-                                                            span.input__message
+                                                    //- .order-stage__data-group-inputs 
                                                     .input
-                                                        input.input__field(type="text" name="legalAddress" placeholder="Юридический адрес" required)
+                                                        input.input__field(type="text" inputmode="numeric" name="kpp" placeholder="КПП *" data-kpp-mask required)
                                                         span.input__message
                                                     .input
-                                                        input.input__field(type="text" name="actualAddress" placeholder="Фактический адрес" required)
+                                                        input.input__field(type="text" inputmode="numeric" name="paymentAccount" placeholder="Расчетный счет *" data-payment-account-mask required)
                                                         span.input__message
-                                            .order-stage__wrap-data 
-                                                span.order-stage__data-title Дополнительная информация
-                                                .order-stage__data-inputs 
-                                                    .textarea
-                                                        textarea.textarea__field(name="comment" placeholder="Комментарий к заказу")
-                                                        span.textarea__message
+                                                    .input
+                                                        input.input__field(type="text" inputmode="numeric" name="inn" placeholder="ИНН *" data-inn-mask required)
+                                                        span.input__message
+                                                    .input
+                                                        input.input__field(type="text" inputmode="numeric" name="bicBank" placeholder="БИК банка *" data-bic-mask required)
+                                                        span.input__message
+                                                    .input
+                                                        input.input__field(type="text" name="legalAddress" placeholder="Юридический адрес *" required)
+                                                        span.input__message
+                                                    .input
+                                                        input.input__field(type="text" name="actualAddress" placeholder="Фактический адрес *" required)
+                                                        span.input__message
+                                            //- .order-stage__wrap-data 
+                                            //-     span.order-stage__data-title Дополнительная информация
+                                            //-     .order-stage__data-inputs 
+                                            //-         .textarea
+                                            //-             textarea.textarea__field(name="comment" placeholder="Комментарий к заказу")
+                                            //-             span.textarea__message
                         .making-order__wrap-aside-info
                             .order-details
                                 .order-details__info 
@@ -183,15 +210,18 @@ block content
                                         li 
                                             span Товары · 2
                                             span 6 431 ₽
+                                        li 
+                                            span Скидка на онлайн оплату
+                                            span -300 ₽
                                 .order-details__wrap-price 
                                     span.order-details__title Итого
                                     .order-details__inner-price
-                                        span.order-details__old-price 12 990 ₽
+                                        //- span.order-details__old-price 12 990 ₽
                                         span.order-details__price 6 431 ₽
                                 button(class="btn" type="submit")
                                     span Оформить заказ
-                            .privacy-policy
-                                span Нажимая на кнопку «Оформить заказ», вы соглашаетесь на <a href="#"> обработку персональных данных</a>
+                                .privacy-policy
+                                    span Нажимая на кнопку «Оформить заказ», вы соглашаетесь на <a href="#"> обработку персональных данных</a>
                             .making-order__wrap-info-blocks 
                                 a.info-block(href="#")
                                     img(src=require("../icons/help-circle.svg") class="info-block__icon" alt="icon")
@@ -214,3 +244,5 @@ block content
                                         span.info-block__subtitle работаем с службой курьерской доставки СДЭК                     
         +footer
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;amp;loadByRequire=1"></script>
+        script
+            include ../scripts/miniMapinit.js

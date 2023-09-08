@@ -60,53 +60,20 @@ export default function orderStage() {
             }
         }
 
-        ymaps.ready(miniMapinit)
-        ymaps.ready(mapinit)
+        // ymaps.ready(mapinit)
 
-        function miniMapinit() {
-            const map = orderStage.querySelector('[data-order-stage="mini-map"]')
+        // function mapinit() {
+        //     const map = orderStage.querySelector('[data-order-stage="map"]')
     
-            if (!map) return
+        //     if (!map) return
     
-            const myMap = new ymaps.Map(map, {
-                center: [55.77101400, 37.63209300],
-                zoom: 13,
-                controls: ["zoomControl"]
-            });
+        //     const myMap = new ymaps.Map(map, {
+        //         center: [55.77101400, 37.63209300],
+        //         zoom: 13,
+        //         controls: ["zoomControl"]
+        //     });
     
-            myMap.controls.add('fullscreenControl', { float: 'left' })
-    
-            let pm = new ymaps.Placemark([55.77101400, 37.63209300], {
-                balloonContent: 'balloonContent',
-                preset: 'islands#blackStretchyIcon',
-                draggable: true,
-            }, {
-                iconLayout: 'default#image',
-                // iconImageHref: './assets/images/point.svg',
-                iconImageSize: [48, 48],
-                iconImageOffset: [-24, -24],
-                hideIconOnBalloonOpen: false,
-            })
-    
-            myMap.geoObjects.add(pm)
-    
-            pm.events.add('click', (event) => {
-                myMap.setCenter(event.get('target').geometry.getCoordinates())
-            })
-        }
-
-        function mapinit() {
-            const map = orderStage.querySelector('[data-order-stage="map"]')
-    
-            if (!map) return
-    
-            const myMap = new ymaps.Map(map, {
-                center: [55.77101400, 37.63209300],
-                zoom: 13,
-                controls: ["zoomControl"]
-            });
-    
-            myMap.controls.add('fullscreenControl', { float: 'left' })
-        }
+        //     myMap.controls.add('fullscreenControl', { float: 'left' })
+        // }
     })
 }

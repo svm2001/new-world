@@ -1,0 +1,92 @@
+@use "../vars";
+
+.a-radio {
+
+    &:not([disabled]):hover>&__label {
+        cursor: pointer;
+    }
+
+    &:not([disabled]):hover>&__label &__decore::before {
+        border-color: vars.$lightgray2;
+    }
+
+    &[disabled] {
+        opacity: 0.6;
+        pointer-events: none;
+
+        .a-radio {
+            &__decore::before {
+                background-color: #bebebe;
+                border-color: #bebebe;
+            }
+        }
+    }
+
+    &__label {
+        position: relative;
+        display: grid;
+        padding-left: 28px;
+    }
+
+    &__input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+        display: none;
+
+        &:checked~.a-radio__decore::before {
+            border-color: vars.$red;
+            background-color: vars.$red;
+        }
+
+        &:checked~.a-radio__decore::after {
+            opacity: 1;
+        }
+
+        &:checked~.a-radio__text {
+            color: vars.$red;
+        }
+    }
+
+    &__text {
+        color: vars.$dark;
+        transition: color 0.3s;
+    }
+
+    &__decore {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &::before {
+            width: 100%;
+            height: 100%;
+            border: 1px solid;
+            border-radius: 100px;
+            border-color: vars.$lightgray;
+            background-color: vars.$lightgray2;
+            transition: border-color 0.3s, background-color 0.3s;
+        }
+
+        &::after {
+            width: 8px;
+            height: 8px;
+            border-radius: 100px;
+            background-color: vars.$white;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+    }
+}

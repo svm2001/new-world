@@ -1,6 +1,6 @@
 import * as noUiSlider from 'nouislider';
 import wNumb from 'wnumb'
-// import IMask from 'imask'
+import IMask from 'imask'
 import { slider } from "./components/slider";
 import { header } from "./components/header";
 import { cityChoose } from "./components/cityChoose";
