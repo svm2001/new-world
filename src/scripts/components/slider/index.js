@@ -174,7 +174,6 @@ export function slider() {
     asNavFor: '.product__slider--main',
     focusOnSelect: true,
     vertical: true,
-    arrows: true,
     responsive: [
       {
         breakpoint: 1399,
@@ -192,11 +191,8 @@ export function slider() {
   let productCardAddSliderCount = $('.product__slider--add').slick('getSlick').slideCount;
 
   if(productCardAddSliderCount > 5) {
-    document.querySelector('.product__slider--add').classList.add('center-mode')
+    document.querySelector('.product__slider--add').classList.add('slider-padding')
   }
-
-  console.log(productCardAddSliderCount)
-
 
   $('.product__slider--main').slick({
     infinite: false,
