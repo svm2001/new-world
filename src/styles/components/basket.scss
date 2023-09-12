@@ -1,9 +1,43 @@
 @use "../vars";
+@use '../mixins/responsive';
 
 .basket {
 
-    .container {
-        padding-bottom: 80px;
+  .container {
+    @include responsive.media-breakpoint-down(1400) {
+      padding-bottom: 0!important;
+    }
+  }
+
+    &__content {
+      margin-bottom: 80px;
+      @include responsive.media-breakpoint-down(1400) {
+        margin-bottom: 24px;
+      }
+      @include responsive.media-breakpoint-down(768) {
+        margin-bottom: 52px;
+      }
+    }
+
+  @include responsive.media-breakpoint-down(768) {
+    .btn--watch-all {
+      display: none!important;
+    }
+
+    .bestPrice .swiper-horizontal > .swiper-scrollbar, .swiper-scrollbar.swiper-scrollbar-horizontal {
+      bottom: -24px;
+    }
+  }
+
+    .bestPrice {
+      margin-bottom: 40px;
+      @include responsive.media-breakpoint-down(1400) {
+        margin-bottom: 85px;
+      }
+
+      @include responsive.media-breakpoint-down(768) {
+        margin-bottom: 54px;
+      }
     }
 
     &__block-empty-basket {
