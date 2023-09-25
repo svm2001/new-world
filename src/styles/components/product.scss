@@ -257,7 +257,7 @@
           transform: rotate(90deg);
         }
         @include responsive.media-breakpoint-down(1024) {
-          right: -13px;
+          right: 4px;
         }
         @include responsive.media-breakpoint-down(992) {
           right: -4px;

@@ -93,7 +93,7 @@ module.exports = (env) => ({
     devMiddleware: {
       publicPath: "",
     },
-    port: 2001,
+    port: 2002,
   },
   optimization: {
     minimizer: [

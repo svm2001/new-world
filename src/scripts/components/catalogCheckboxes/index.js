@@ -1,8 +1,13 @@
 export function catalogCheckboxes () {
   $(document).on('change', 'input[type=checkbox]', function () {
-    var $this = $(this), $chks = $(document.getElementsByName(this.name)), $all = $chks.filter(".catalog__checkbox-check-all");
+    var $this = $(this),
+      $chks = $(document.getElementsByName(this.name)),
+      $all = $chks.filter(".catalog__checkbox-check-all");
     if ($this.hasClass('catalog__checkbox-check-all')) {
       $chks.prop('checked', $this.prop('checked'));
+      document.querySelector('.filter__result-float').classList.add('visible')
+      let height = this.closest('.ac').offsetTop
+      document.querySelector('.filter__result-float').style.top = height + 'px'
     } else switch ($chks.filter(":checked").length) {
       case +$all.prop('checked'):
         $all.prop('checked', false).prop('indeterminate', false);

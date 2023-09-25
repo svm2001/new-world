@@ -19,6 +19,13 @@ export function PriceRangeSlider() {
       }
     });
 
+    const catalogRes = document.querySelector('.filter__result-float')
+    stepsSlider.noUiSlider.on('start',  function(values, handle) {
+      catalogRes.classList.add('visible');
+      let height = stepsSlider.closest('.ac').offsetTop
+      catalogRes.style.top = height + 'px'
+    })
+
     stepsSlider.noUiSlider.on('update', function (values, handle) {
       inputs[handle].value = values[handle].slice(0, -3);
     });
@@ -26,6 +33,9 @@ export function PriceRangeSlider() {
     inputs.forEach(function (input, handle) {
       input.addEventListener('change', function () {
         stepsSlider.noUiSlider.setHandle(handle, this.value);
+        catalogRes.classList.add('visible');
+        let height = stepsSlider.closest('.ac').offsetTop
+        catalogRes.style.top = height + 'px'
       });
       input.addEventListener('keydown', function (e) {
         let values = stepsSlider.noUiSlider.get();
