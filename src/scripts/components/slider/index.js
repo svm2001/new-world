@@ -51,7 +51,7 @@ export function slider() {
     breakpointsInverse: true,
     slidesPerView: 1,
     spaceBetween: 25,
-    loop: true,
+    loop: false,
     breakpoints: {
 
     },

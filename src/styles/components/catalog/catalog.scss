@@ -156,8 +156,11 @@
 
   .product-card_dots {
     margin: 1px 0;
-    top: -23px;
-    position: relative;
+    bottom: 20px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
   }
 
   .product-card_img {

@@ -127,6 +127,9 @@
 
   &__btns {
     display: flex;
+    &__btns a span {
+      display: none
+    }
     @include responsive.media-breakpoint-up(1024) {
       display: none;
     }
