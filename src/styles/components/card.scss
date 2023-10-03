@@ -336,6 +336,23 @@
   z-index: 2;
 }
 
+.product__color-choice-wrp::-webkit-scrollbar {
+  height: 4px!important;
+}
+
+.product__color-choice-wrp::-webkit-scrollbar-track {
+  background: #efefef !important;
+}
+
+.product__color-choice-wrp::-webkit-scrollbar-thumb {
+  background-color: #cbcbcb!important;
+  border-radius: 20px!important;
+}
+
+.product__tabs-content-item--desc {
+  font-size: 16px;
+}
+
 .product-card_img-slider_container {
   position: relative;
   margin-bottom: 8px;
