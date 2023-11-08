@@ -29,6 +29,7 @@
     &--new {
       background: #2A8A61;
       color: vars.$white;
+      width: fit-content;
       padding: 5px 10px;
       font-size: 12px;
       text-transform: uppercase;
@@ -38,12 +39,24 @@
 
     &--discount {
       background: #F66720;
+      width: fit-content;
       color: vars.$white;
       padding: 5px 10px;
       font-size: 12px;
       text-transform: uppercase;
       border-radius: 4px;
       font-weight: 700;
+    }
+
+    &--best-price {
+      background: vars.$yellow;
+      width: fit-content;
+      color: vars.$dark;
+      padding: 2px 6px;
+      font-size: 12px;
+      text-transform: uppercase;
+      border-radius: 4px;
+      font-weight: 500;
     }
   }
 
